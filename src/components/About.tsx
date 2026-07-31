@@ -1,0 +1,32 @@
+import { Eyebrow } from "@/components/ui/Eyebrow";
+import { Reveal } from "@/components/ui/Reveal";
+import { Button } from "@/components/ui/Button";
+
+export function About() {
+  return (
+    <section id="about" className="py-2xl md:py-3xl">
+      <div className="max-w-content mx-auto px-md md:px-xl">
+        <Reveal>
+          <Eyebrow>WHO WE ARE</Eyebrow>
+          <h2 className="text-[28px] md:text-[48px] font-bold tracking-display leading-[1.1] max-w-[720px]">
+            We build systems that see, measure, and act — precisely.
+          </h2>
+          <p className="mt-lg max-w-[640px] text-[16px] md:text-[18px] leading-[1.7] text-text-secondary">
+            Antrix is a machine vision and mechatronics company building
+            intelligent precision systems for the physical world. From
+            flagship products to custom-engineered solutions, we solve
+            problems that require more than human eyes.
+          </p>
+          <p className="mt-md text-[16px] md:text-[18px] leading-[1.7] text-text-secondary">
+            Based in Surat, India. Built for the world.
+          </p>
+          <div className="mt-lg">
+            <Button href="/about" variant="ghost" arrow>
+              More About Us
+            </Button>
+          </div>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
