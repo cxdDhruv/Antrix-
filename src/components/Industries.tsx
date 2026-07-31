@@ -33,6 +33,10 @@ export function Industries() {
             measurement, inspection, sorting, or automation of physical
             objects, Antrix can engineer a solution for it.
           </p>
+          <p className="mt-md max-w-[640px] text-[16px] md:text-[18px] font-semibold text-white">
+            Whatever your industry, we can build the machine vision and
+            mechatronics solution for it.
+          </p>
         </Reveal>
       </div>
 

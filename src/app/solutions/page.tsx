@@ -20,14 +20,14 @@ const pillars = [
     title: "See What Standard Systems Miss.",
     body: "We build custom computer vision systems that detect, measure, classify, inspect, and track — in real time, at industrial scale, under real-world conditions. If your process involves any object that needs to be seen, analyzed, or verified by a machine — we build the system that does it with precision.",
     applications: [
-      "Dimensional Measurement & Gauging",
-      "Surface Defect & Anomaly Detection",
-      "Shape Classification & Sorting",
-      "Visual Quality Inspection",
-      "Object Detection & Tracking",
-      "Barcode, Label & Print Verification",
-      "Counting & Inventory Automation",
-      "OCR & Character Recognition on Parts",
+      "Diamond & Gemstone Grading Automation",
+      "Sub-Millimeter Dimensional Measurement",
+      "Automotive Component Quality Inspection",
+      "Pharmaceutical Packaging Verification",
+      "Electronics & PCB Assembly Inspection",
+      "Deep Learning-Based Defect & Anomaly Detection",
+      "Automated Optical Inspection (AOI)",
+      "Edge-Deployed Real-Time Inference",
     ],
   },
   {
@@ -166,17 +166,16 @@ export default function SolutionsPage() {
                   <p className="mt-lg font-mono text-[11px] uppercase tracking-eyebrow text-text-muted">
                     Applications
                   </p>
-                  <ul className="mt-sm grid grid-cols-1 md:grid-cols-2 gap-x-md gap-y-2">
+                  <div className="mt-sm flex flex-wrap gap-2">
                     {pillar.applications.map((app) => (
-                      <li
+                      <span
                         key={app}
-                        className="flex items-start gap-2 text-[14px] text-text-secondary"
+                        className="inline-block rounded-full border border-border px-4 py-2 text-[13px] text-text-secondary hover:border-white/40 hover:text-white transition-colors"
                       >
-                        <ArrowRight size={14} className="mt-1 shrink-0 text-white" />
                         {app}
-                      </li>
+                      </span>
                     ))}
-                  </ul>
+                  </div>
                 </div>
               </Reveal>
             ))}
