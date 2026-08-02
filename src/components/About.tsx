@@ -18,7 +18,7 @@ export function About() {
             problems that require more than human eyes.
           </p>
           <p className="mt-md text-[16px] md:text-[18px] leading-[1.7] text-text-secondary">
-            Based in Surat, India. Built for the world.
+            Based in Surat, Gujarat, India. Built for the world.
           </p>
           <div className="mt-lg">
             <Button href="/about" variant="ghost" arrow>

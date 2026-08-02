@@ -166,7 +166,7 @@ export default function AboutPage() {
         <div className="relative z-10 max-w-content mx-auto px-md md:px-xl text-center">
           <Reveal>
             <p className="text-[18px] md:text-[22px] text-white/90">
-              Based in Surat, India.
+              Based in Surat, Gujarat, India.
               <br />
               Building for the world.
             </p>
