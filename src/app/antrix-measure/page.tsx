@@ -24,7 +24,7 @@ const specs = [
   { label: "Supported Cut Types", value: "9 (Round + 8 Fancy Cuts)" },
   { label: "Measurement Mode", value: "Single Stone + Multi-Stone Batch" },
   { label: "Calibration", value: "High-Precision Optical System" },
-  { label: "Sorting Output", value: "Automatic LED-Guided Bin Sorting" },
+  { label: "Sorting Output", value: "LED-Guided Bin Placement" },
   { label: "Shape Classification", value: "Automatic (9 Cut Types)" },
   { label: "Interface", value: "Desktop Application" },
 ];
@@ -39,8 +39,8 @@ const features = [
     body: "Round, Oval, Pear, Marquise, Princess, Emerald, Cushion, Heart, Radiant — Antrix Measure classifies and measures all 9 cut types automatically. No manual selection required.",
   },
   {
-    title: "Automatic Bin Sorting",
-    body: "LED-guided bin sorting means measured stones are automatically directed to the correct bin. Zero manual sorting. Zero errors.",
+    title: "LED-Guided Bin Sorting",
+    body: "Once a stone is measured, an LED lights up on the correct bin — the operator simply places it there. No manual lookup, no guesswork, no sorting errors.",
   },
   {
     title: "Precision Optical Calibration",

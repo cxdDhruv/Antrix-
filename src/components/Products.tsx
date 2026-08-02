@@ -7,7 +7,7 @@ const specs = [
   "±0.02mm Measurement Accuracy",
   "9 Cut Types — Round + 8 Fancy Cuts",
   "Single & Multi-Stone Measurement",
-  "Automatic LED-Guided Bin Sorting",
+  "LED-Guided Bin Placement",
   "Automatic Shape Classification",
   "High-Precision Optical Calibration",
   "Desktop Application Interface",

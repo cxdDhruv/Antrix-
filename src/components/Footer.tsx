@@ -28,8 +28,8 @@ export function Footer() {
     <footer className="relative z-10 border-t border-border bg-bg-primary py-2xl">
       <div className="max-w-content mx-auto px-md md:px-xl">
         <div className="flex items-center gap-3">
-          <Image src="/images/logo.png" alt="Antrix" width={40} height={40} className="w-9 h-9" />
-          <span className="text-[16px] font-semibold tracking-tighter">
+          <Image src="/images/logo.png" alt="Antrix" width={56} height={56} className="w-12 h-12 md:w-14 md:h-14" />
+          <span className="text-[20px] md:text-[22px] font-semibold tracking-tighter">
             ANTRIX
           </span>
         </div>
@@ -37,7 +37,7 @@ export function Footer() {
           Built for What&apos;s Next.
         </p>
 
-        <div className="mt-xl grid grid-cols-2 md:grid-cols-3 gap-lg max-w-[560px]">
+        <div className="mt-xl grid grid-cols-2 md:grid-cols-4 gap-lg max-w-[760px]">
           {columns.map((col) => (
             <div key={col.title}>
               <h4 className="text-[13px] font-semibold text-white mb-sm">
@@ -57,6 +57,19 @@ export function Footer() {
               </ul>
             </div>
           ))}
+
+          <div>
+            <h4 className="text-[13px] font-semibold text-white mb-sm">
+              Founder
+            </h4>
+            <p className="text-[14px] text-text-secondary">Dhruv Jasani</p>
+            <a
+              href="mailto:jasanidhruv256@gmail.com"
+              className="block mt-2 text-[14px] text-text-secondary hover:text-white transition-colors"
+            >
+              jasanidhruv256@gmail.com
+            </a>
+          </div>
         </div>
 
         <div className="mt-2xl pt-lg border-t border-border text-[13px] text-text-muted">

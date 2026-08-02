@@ -13,6 +13,8 @@ type Status = "idle" | "sending" | "success" | "error";
 export function Contact() {
   const [form, setForm] = useState({
     name: "",
+    email: "",
+    phone: "",
     company: "",
     industry: "",
     need: "Antrix Measure Demo",
@@ -30,6 +32,9 @@ export function Contact() {
       payload.append("subject", `Demo Request — ${form.need}`);
       payload.append("from_name", "Antrix Website");
       payload.append("name", form.name);
+      payload.append("email", form.email);
+      payload.append("replyto", form.email);
+      payload.append("phone", form.phone);
       payload.append("company", form.company);
       payload.append("industry", form.industry);
       payload.append("need", form.need);
@@ -45,6 +50,8 @@ export function Contact() {
         setStatus("success");
         setForm({
           name: "",
+          email: "",
+          phone: "",
           company: "",
           industry: "",
           need: "Antrix Measure Demo",
@@ -91,7 +98,12 @@ export function Contact() {
             </div>
             <div className="flex items-center gap-3 text-text-secondary">
               <AtSign size={18} />
-              @antrixvision
+              <a
+                href="https://antrix.solutions"
+                className="hover:text-white"
+              >
+                antrix.solutions
+              </a>
             </div>
           </div>
         </Reveal>
@@ -104,6 +116,22 @@ export function Contact() {
               className={inputClass}
               value={form.name}
               onChange={(e) => setForm({ ...form, name: e.target.value })}
+            />
+            <input
+              required
+              type="email"
+              placeholder="Email Address *"
+              className={inputClass}
+              value={form.email}
+              onChange={(e) => setForm({ ...form, email: e.target.value })}
+            />
+            <input
+              required
+              type="tel"
+              placeholder="Mobile Number *"
+              className={inputClass}
+              value={form.phone}
+              onChange={(e) => setForm({ ...form, phone: e.target.value })}
             />
             <input
               required

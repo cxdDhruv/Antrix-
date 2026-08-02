@@ -58,10 +58,10 @@ export function MeasureHero() {
           <Image
             src="/images/measure-product.png"
             alt="Antrix Measure device"
-            width={1075}
-            height={910}
+            width={1024}
+            height={1024}
             priority
-            className="w-full h-auto max-w-[560px] lg:max-w-[760px]"
+            className="w-full h-auto max-w-[560px] lg:max-w-[680px]"
           />
         </div>
       </div>
