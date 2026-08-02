@@ -4,8 +4,7 @@ import { useRef } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/Button";
 import { MouseGlow } from "@/components/ui/MouseGlow";
-
-const words = ["Built", "for", "What's", "Next."];
+import { TypingText } from "@/components/ui/TypingText";
 
 export function Hero() {
   const glowRef = useRef<HTMLDivElement>(null);
@@ -43,18 +42,7 @@ export function Hero() {
         </motion.p>
 
         <h1 className="text-[40px] md:text-[72px] lg:text-[96px] font-extrabold leading-[1.05] md:leading-[0.98] tracking-tighter text-white">
-          {words.map((word, i) => (
-            <motion.span
-              key={word}
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 + i * 0.08, ease: [0.22, 1, 0.36, 1] }}
-              className="inline-block mr-[0.28em]"
-            >
-              {word}
-              {i === 1 ? <br /> : null}
-            </motion.span>
-          ))}
+          <TypingText text={"Built for\nWhat's Next."} />
         </h1>
 
         <motion.p
