@@ -42,7 +42,7 @@ export function Hero() {
         </motion.p>
 
         <h1 className="text-[40px] md:text-[72px] lg:text-[96px] font-extrabold leading-[1.05] md:leading-[0.98] tracking-tighter text-white">
-          <TypingText text={"Built for\nWhat's Next."} />
+          <TypingText text={"Built for\nWhat's Next."} speed={85} />
         </h1>
 
         <motion.p

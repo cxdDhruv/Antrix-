@@ -124,7 +124,7 @@ export default function SolutionsPage() {
       <Nav />
 
       <GlowSection className="pt-[72px]">
-        <div className="relative z-10 max-w-content mx-auto px-md md:px-xl py-2xl">
+        <div className="relative z-10 max-w-content mx-auto px-md md:px-xl pt-lg pb-2xl">
           <Eyebrow>WHAT WE SOLVE</Eyebrow>
           <h1 className="text-[36px] md:text-[64px] font-extrabold leading-[1.05] tracking-tighter max-w-[1180px]">
             Your Problem.
