@@ -5,7 +5,7 @@ import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Reveal } from "@/components/ui/Reveal";
 import { MapPin, Mail, Phone, AtSign } from "lucide-react";
 
-const CONTACT_EMAIL = "jasanidhruv256@gmail.com";
+const CONTACT_EMAIL = "info@antrix.solutions";
 const CONTACT_PHONE = "+91 94996 36914";
 
 type Status = "idle" | "sending" | "success" | "error";

@@ -64,10 +64,10 @@ export function Footer() {
             </h4>
             <p className="text-[14px] text-text-secondary">Dhruv Jasani</p>
             <a
-              href="mailto:jasanidhruv256@gmail.com"
+              href="mailto:info@antrix.solutions"
               className="block mt-2 text-[14px] text-text-secondary hover:text-white transition-colors"
             >
-              jasanidhruv256@gmail.com
+              info@antrix.solutions
             </a>
           </div>
         </div>
