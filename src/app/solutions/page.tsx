@@ -7,7 +7,6 @@ import { Reveal } from "@/components/ui/Reveal";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
 import { AmbientBackground } from "@/components/ui/AmbientBackground";
-import { SectionDivider } from "@/components/ui/SectionDivider";
 
 export const metadata: Metadata = {
   title: "Solutions — Custom Machine Vision, Mechatronics & Robotics | Antrix",
@@ -142,7 +141,6 @@ export default function SolutionsPage() {
         </div>
       </GlowSection>
 
-      <SectionDivider from="black" to="white" />
       <section className="relative z-10 overflow-hidden py-2xl md:py-3xl theme-light">
         <AmbientBackground variant="light" />
         <div className="relative z-10 max-w-content mx-auto px-md md:px-xl">
@@ -153,7 +151,7 @@ export default function SolutionsPage() {
           <div className="mt-md space-y-lg">
             {pillars.map((pillar, i) => (
               <Reveal key={pillar.tag} delay={i * 0.08}>
-                <div className="border border-border rounded-lg p-lg md:p-xl bg-bg-elevated">
+                <div className="card-hover border border-border rounded-lg p-lg md:p-xl bg-bg-elevated">
                   <div className="flex items-center gap-3">
                     <pillar.icon size={24} className="text-white" />
                     <span className="font-mono text-[11px] uppercase tracking-eyebrow text-text-muted">
@@ -187,7 +185,6 @@ export default function SolutionsPage() {
         </div>
       </section>
 
-      <SectionDivider from="white" to="black" />
       <section className="relative overflow-hidden py-2xl md:py-3xl">
         <AmbientBackground variant="dark" />
         <div className="relative z-10 max-w-content mx-auto px-md md:px-xl">
@@ -201,7 +198,7 @@ export default function SolutionsPage() {
           <div className="mt-xl grid grid-cols-1 md:grid-cols-5 gap-lg">
             {process.map((step, i) => (
               <Reveal key={step.num} delay={i * 0.08}>
-                <div className="border-t border-border pt-md">
+                <div className="step-hover border-t border-border pt-md">
                   <span className="font-mono text-[13px] text-text-muted">
                     {step.num}
                   </span>
@@ -218,7 +215,6 @@ export default function SolutionsPage() {
         </div>
       </section>
 
-      <SectionDivider from="black" to="white" />
       <section className="relative z-10 overflow-hidden py-2xl md:py-3xl theme-light">
         <AmbientBackground variant="light" />
         <div className="relative z-10 max-w-content mx-auto px-md md:px-xl">
@@ -232,7 +228,7 @@ export default function SolutionsPage() {
           <div className="mt-xl grid grid-cols-1 md:grid-cols-2 gap-md">
             {audience.map((item, i) => (
               <Reveal key={item} delay={i * 0.06}>
-                <div className="flex items-start gap-3 border border-border rounded-lg p-lg h-full">
+                <div className="card-hover flex items-start gap-3 border border-border rounded-lg p-lg h-full">
                   <ArrowRight size={18} className="mt-1 shrink-0 text-white" />
                   <p className="text-[15px] leading-[1.7] text-text-secondary">
                     {item}
@@ -252,7 +248,6 @@ export default function SolutionsPage() {
         </div>
       </section>
 
-      <SectionDivider from="white" to="black" />
       <section className="relative z-10 py-lg overflow-hidden">
         <AmbientBackground variant="dark" />
         <div className="relative z-10 flex w-max ticker-track">
@@ -268,7 +263,6 @@ export default function SolutionsPage() {
         </div>
       </section>
 
-      <SectionDivider from="black" to="white" />
       <section className="relative overflow-hidden py-2xl md:py-3xl border-y border-border theme-light">
         <AmbientBackground variant="light" />
         <div className="relative z-10 max-w-content mx-auto px-md md:px-xl text-center">
@@ -290,7 +284,6 @@ export default function SolutionsPage() {
         </div>
       </section>
 
-      <SectionDivider from="white" to="black" />
       <Footer />
     </main>
   );

@@ -37,9 +37,9 @@ export function MeasureHero() {
         <div>
           <Eyebrow>ANTRIX MEASURE — FLAGSHIP PRODUCT</Eyebrow>
           <h1 className="text-[40px] md:text-[56px] font-extrabold leading-[1.05] tracking-tighter">
-            Measurement
+            Precision Has
             <br />
-            Without Compromise.
+            a New Name.
           </h1>
           <p className="mt-lg max-w-[520px] text-[16px] md:text-[18px] leading-[1.7] text-text-secondary">
             Automated dimensional measurement for cut diamonds. ±0.02mm
@@ -56,7 +56,7 @@ export function MeasureHero() {
           </div>
         </div>
 
-        <div className="flex justify-center lg:justify-end lg:-mr-xl">
+        <div className="img-zoom flex justify-center lg:justify-end lg:-mr-xl">
           <Image
             src="/images/measure-product.png"
             alt="Antrix Measure device"

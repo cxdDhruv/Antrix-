@@ -6,7 +6,6 @@ import { Reveal } from "@/components/ui/Reveal";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
 import { AmbientBackground } from "@/components/ui/AmbientBackground";
-import { SectionDivider } from "@/components/ui/SectionDivider";
 
 export const metadata: Metadata = {
   title: "About Antrix — Precision Machine Vision & Mechatronics",
@@ -42,7 +41,6 @@ export default function AboutPage() {
         </div>
       </GlowSection>
 
-      <SectionDivider from="black" to="white" />
       <section className="relative z-10 overflow-hidden py-2xl md:py-3xl theme-light">
         <AmbientBackground variant="light" />
         <div className="relative z-10 max-w-content mx-auto px-md md:px-xl">
@@ -60,7 +58,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <SectionDivider from="white" to="black" />
       <section className="relative overflow-hidden py-2xl md:py-3xl">
         <AmbientBackground variant="dark" />
         <div className="relative z-10 max-w-content mx-auto px-md md:px-xl">
@@ -90,7 +87,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <SectionDivider from="black" to="white" />
       <section className="relative z-10 overflow-hidden py-2xl md:py-3xl theme-light">
         <AmbientBackground variant="light" />
         <div className="relative z-10 max-w-content mx-auto px-md md:px-xl">
@@ -103,7 +99,7 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-md">
             <Reveal delay={0.05}>
-              <div className="border border-border rounded-lg p-lg h-full bg-bg-elevated">
+              <div className="card-hover border border-border rounded-lg p-lg h-full bg-bg-elevated">
                 <h3 className="text-[20px] font-semibold tracking-display">
                   Products
                 </h3>
@@ -116,7 +112,7 @@ export default function AboutPage() {
               </div>
             </Reveal>
             <Reveal delay={0.1}>
-              <div className="border border-border rounded-lg p-lg h-full bg-bg-elevated">
+              <div className="card-hover border border-border rounded-lg p-lg h-full bg-bg-elevated">
                 <h3 className="text-[20px] font-semibold tracking-display">
                   Custom Solutions
                 </h3>
@@ -132,7 +128,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <SectionDivider from="white" to="black" />
       <section className="relative overflow-hidden py-2xl md:py-3xl">
         <AmbientBackground variant="dark" />
         <div className="relative z-10 max-w-content mx-auto px-md md:px-xl">
@@ -158,7 +153,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <SectionDivider from="black" to="white" />
       <section className="relative z-10 overflow-hidden py-2xl md:py-3xl theme-light border-y border-border">
         <AmbientBackground variant="light" />
         <div className="relative z-10 max-w-content mx-auto px-md md:px-xl">
@@ -174,7 +168,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <SectionDivider from="white" to="black" />
       <section className="relative overflow-hidden py-2xl md:py-3xl">
         <AmbientBackground variant="dark" />
         <div className="relative z-10 max-w-content mx-auto px-md md:px-xl text-center">

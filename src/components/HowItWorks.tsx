@@ -42,7 +42,7 @@ export function HowItWorks() {
         <div className="mt-xl grid grid-cols-1 md:grid-cols-4 gap-lg">
           {steps.map((step, i) => (
             <Reveal key={step.num} delay={i * 0.1}>
-              <div className="border-t border-border pt-md">
+              <div className="step-hover border-t border-border pt-md">
                 <span className="font-mono text-[13px] text-text-muted">
                   STEP {step.num}
                 </span>

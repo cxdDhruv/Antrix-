@@ -30,7 +30,7 @@ export function Products() {
         </Reveal>
 
         <Reveal delay={0.1} className="mt-xl">
-          <div className="border border-border rounded-lg bg-bg-elevated p-lg md:p-xl">
+          <div className="card-hover border border-border rounded-lg bg-bg-elevated p-lg md:p-xl">
             <span className="inline-block font-mono text-[11px] uppercase tracking-eyebrow text-text-muted border border-border rounded px-3 py-1">
               FLAGSHIP PRODUCT
             </span>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
@@ -15,9 +15,25 @@ const links = [
 
 export function Nav() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    function onScroll() {
+      setScrolled(window.scrollY > 8);
+    }
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className="fixed top-0 inset-x-0 z-50 border-b border-border bg-bg-primary/80 backdrop-blur">
+    <header
+      className={`fixed top-0 inset-x-0 z-50 border-b bg-bg-primary/80 backdrop-blur transition-shadow duration-300 ${
+        scrolled
+          ? "border-border shadow-[0_4px_24px_rgba(0,0,0,0.35)]"
+          : "border-transparent"
+      }`}
+    >
       <div className="max-w-content mx-auto flex items-center justify-between px-md md:px-xl h-[72px]">
         <Link href="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
           <Image src="/images/logo.png" alt="Antrix" width={44} height={44} className="w-10 h-10 md:w-11 md:h-11" />
@@ -31,7 +47,7 @@ export function Nav() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-[14px] text-text-secondary hover:text-white transition-colors"
+              className="nav-link text-[14px] text-text-secondary hover:text-white transition-colors"
             >
               {link.label}
             </Link>

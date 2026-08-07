@@ -7,7 +7,6 @@ import { Reveal } from "@/components/ui/Reveal";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
 import { AmbientBackground } from "@/components/ui/AmbientBackground";
-import { SectionDivider } from "@/components/ui/SectionDivider";
 
 export const metadata: Metadata = {
   title: "Antrix Measure — Diamond Measurement System | ±0.02mm Accuracy",
@@ -77,7 +76,6 @@ export default function AntrixMeasurePage() {
 
       <MeasureHero />
 
-      <SectionDivider from="black" to="white" />
       <section className="relative overflow-hidden py-2xl md:py-3xl theme-light">
         <AmbientBackground variant="light" />
         <div className="relative z-10 max-w-content mx-auto px-md md:px-xl">
@@ -101,7 +99,6 @@ export default function AntrixMeasurePage() {
         </div>
       </section>
 
-      <SectionDivider from="white" to="black" />
       <section
         id="specifications"
         className="relative overflow-hidden py-2xl md:py-3xl scroll-mt-[72px]"
@@ -137,7 +134,6 @@ export default function AntrixMeasurePage() {
         </div>
       </section>
 
-      <SectionDivider from="black" to="white" />
       <section className="relative overflow-hidden py-2xl md:py-3xl theme-light">
         <AmbientBackground variant="light" />
         <div className="relative z-10 max-w-content mx-auto px-md md:px-xl">
@@ -151,7 +147,7 @@ export default function AntrixMeasurePage() {
           <div className="mt-xl grid grid-cols-1 md:grid-cols-2 gap-md">
             {features.map((feature, i) => (
               <Reveal key={feature.title} delay={i * 0.08}>
-                <div className="border border-border rounded-lg p-lg h-full bg-bg-elevated">
+                <div className="card-hover border border-border rounded-lg p-lg h-full bg-bg-elevated">
                   <h3 className="text-[20px] font-semibold tracking-display">
                     {feature.title}
                   </h3>
@@ -165,16 +161,17 @@ export default function AntrixMeasurePage() {
         </div>
       </section>
 
-      <SectionDivider from="white" to="black" />
       <section className="relative overflow-hidden py-2xl md:py-3xl">
         <AmbientBackground variant="dark" />
-        <div className="relative z-10 max-w-content mx-auto px-md md:px-xl">
+        <div className="relative z-10 max-w-content mx-auto px-md md:px-xl text-center">
           <Reveal>
-            <Eyebrow>SPECIAL THANKS</Eyebrow>
-            <h2 className="text-[24px] md:text-[36px] font-bold tracking-display leading-[1.2] max-w-[720px]">
+            <Eyebrow className="!text-[15px] md:!text-[18px]">
+              SPECIAL THANKS
+            </Eyebrow>
+            <h2 className="text-[24px] md:text-[36px] font-bold tracking-display leading-[1.2] max-w-[720px] mx-auto">
               With Gratitude to Our Mentors.
             </h2>
-            <p className="mt-md max-w-[720px] text-[16px] md:text-[18px] leading-[1.7] text-text-secondary">
+            <p className="mt-md max-w-[720px] mx-auto text-[16px] md:text-[18px] leading-[1.7] text-text-secondary">
               Antrix Measure would not exist without the guidance, patience,
               and technical direction of our mentors in the Department of
               Mechatronics at G.H. Patel College of Engineering and
@@ -182,17 +179,19 @@ export default function AntrixMeasurePage() {
             </p>
           </Reveal>
 
-          <div className="mt-xl grid grid-cols-1 md:grid-cols-2 gap-lg max-w-[680px]">
+          <div className="mt-xl flex flex-wrap justify-center gap-2xl md:gap-3xl">
             {mentors.map((mentor, i) => (
               <Reveal key={mentor.name} delay={0.1 + i * 0.1}>
-                <div className="flex flex-col items-center text-center gap-md">
-                  <Image
-                    src={mentor.photo}
-                    alt={mentor.name}
-                    width={160}
-                    height={160}
-                    className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border border-border"
-                  />
+                <div className="flex flex-col items-center text-center gap-md w-[220px]">
+                  <div className="img-zoom w-32 h-32 md:w-40 md:h-40 rounded-full border border-border">
+                    <Image
+                      src={mentor.photo}
+                      alt={mentor.name}
+                      width={160}
+                      height={160}
+                      className="w-full h-full rounded-full object-cover"
+                    />
+                  </div>
                   <div>
                     <h3 className="text-[18px] font-semibold tracking-display">
                       {mentor.name}
