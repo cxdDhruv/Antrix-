@@ -1,5 +1,6 @@
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Reveal } from "@/components/ui/Reveal";
+import { AmbientBackground } from "@/components/ui/AmbientBackground";
 
 const industries = [
   "Diamond Processing",
@@ -18,8 +19,9 @@ export function Industries() {
   const loop = [...industries, ...industries];
 
   return (
-    <section className="py-2xl md:py-3xl bg-bg-secondary overflow-hidden">
-      <div className="max-w-content mx-auto px-md md:px-xl">
+    <section className="relative py-2xl md:py-3xl bg-bg-secondary overflow-hidden">
+      <AmbientBackground variant="dark" />
+      <div className="relative z-10 max-w-content mx-auto px-md md:px-xl">
         <Reveal>
           <Eyebrow>WHO WE SERVE</Eyebrow>
           <h2 className="text-[28px] md:text-[48px] font-bold tracking-display leading-[1.1]">
@@ -40,7 +42,7 @@ export function Industries() {
         </Reveal>
       </div>
 
-      <div className="mt-xl relative">
+      <div className="relative z-10 mt-xl">
         <div className="flex w-max ticker-track">
           {loop.map((industry, i) => (
             <div

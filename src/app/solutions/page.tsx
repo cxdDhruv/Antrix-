@@ -6,6 +6,8 @@ import { GlowSection } from "@/components/ui/GlowSection";
 import { Reveal } from "@/components/ui/Reveal";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
+import { AmbientBackground } from "@/components/ui/AmbientBackground";
+import { SectionDivider } from "@/components/ui/SectionDivider";
 
 export const metadata: Metadata = {
   title: "Solutions — Custom Machine Vision, Mechatronics & Robotics | Antrix",
@@ -140,8 +142,10 @@ export default function SolutionsPage() {
         </div>
       </GlowSection>
 
-      <section className="relative z-10 py-2xl md:py-3xl bg-bg-secondary">
-        <div className="max-w-content mx-auto px-md md:px-xl">
+      <SectionDivider from="black" to="white" />
+      <section className="relative z-10 overflow-hidden py-2xl md:py-3xl theme-light">
+        <AmbientBackground variant="light" />
+        <div className="relative z-10 max-w-content mx-auto px-md md:px-xl">
           <Reveal>
             <Eyebrow>WHAT WE BUILD FOR YOU</Eyebrow>
           </Reveal>
@@ -183,7 +187,9 @@ export default function SolutionsPage() {
         </div>
       </section>
 
-      <section className="py-2xl md:py-3xl">
+      <SectionDivider from="white" to="black" />
+      <section className="relative overflow-hidden py-2xl md:py-3xl">
+        <AmbientBackground variant="dark" />
         <div className="relative z-10 max-w-content mx-auto px-md md:px-xl">
           <Reveal>
             <Eyebrow>THE PROCESS</Eyebrow>
@@ -212,8 +218,10 @@ export default function SolutionsPage() {
         </div>
       </section>
 
-      <section className="relative z-10 py-2xl md:py-3xl bg-bg-secondary">
-        <div className="max-w-content mx-auto px-md md:px-xl">
+      <SectionDivider from="black" to="white" />
+      <section className="relative z-10 overflow-hidden py-2xl md:py-3xl theme-light">
+        <AmbientBackground variant="light" />
+        <div className="relative z-10 max-w-content mx-auto px-md md:px-xl">
           <Reveal>
             <Eyebrow>WHO WE WORK WITH</Eyebrow>
             <h2 className="text-[28px] md:text-[48px] font-bold tracking-display leading-[1.1] max-w-[1100px]">
@@ -244,8 +252,10 @@ export default function SolutionsPage() {
         </div>
       </section>
 
+      <SectionDivider from="white" to="black" />
       <section className="relative z-10 py-lg overflow-hidden">
-        <div className="flex w-max ticker-track">
+        <AmbientBackground variant="dark" />
+        <div className="relative z-10 flex w-max ticker-track">
           {industryLoop.map((industry, i) => (
             <div
               key={`${industry}-${i}`}
@@ -258,7 +268,9 @@ export default function SolutionsPage() {
         </div>
       </section>
 
-      <section className="py-2xl md:py-3xl border-y border-border">
+      <SectionDivider from="black" to="white" />
+      <section className="relative overflow-hidden py-2xl md:py-3xl border-y border-border theme-light">
+        <AmbientBackground variant="light" />
         <div className="relative z-10 max-w-content mx-auto px-md md:px-xl text-center">
           <Reveal>
             <h2 className="text-[28px] md:text-[48px] font-bold tracking-display leading-[1.1] max-w-[720px] mx-auto">
@@ -278,6 +290,7 @@ export default function SolutionsPage() {
         </div>
       </section>
 
+      <SectionDivider from="white" to="black" />
       <Footer />
     </main>
   );

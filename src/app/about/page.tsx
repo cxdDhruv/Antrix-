@@ -5,6 +5,8 @@ import { GlowSection } from "@/components/ui/GlowSection";
 import { Reveal } from "@/components/ui/Reveal";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
+import { AmbientBackground } from "@/components/ui/AmbientBackground";
+import { SectionDivider } from "@/components/ui/SectionDivider";
 
 export const metadata: Metadata = {
   title: "About Antrix — Precision Machine Vision & Mechatronics",
@@ -40,8 +42,10 @@ export default function AboutPage() {
         </div>
       </GlowSection>
 
-      <section className="relative z-10 py-2xl md:py-3xl bg-bg-secondary">
-        <div className="max-w-content mx-auto px-md md:px-xl">
+      <SectionDivider from="black" to="white" />
+      <section className="relative z-10 overflow-hidden py-2xl md:py-3xl theme-light">
+        <AmbientBackground variant="light" />
+        <div className="relative z-10 max-w-content mx-auto px-md md:px-xl">
           <Reveal>
             <Eyebrow>MISSION</Eyebrow>
             <p className="max-w-[1180px] text-[18px] md:text-[22px] leading-[1.7] text-white/90">
@@ -56,7 +60,9 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-2xl md:py-3xl">
+      <SectionDivider from="white" to="black" />
+      <section className="relative overflow-hidden py-2xl md:py-3xl">
+        <AmbientBackground variant="dark" />
         <div className="relative z-10 max-w-content mx-auto px-md md:px-xl">
           <Reveal>
             <Eyebrow>PHILOSOPHY</Eyebrow>
@@ -84,8 +90,10 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="relative z-10 py-2xl md:py-3xl bg-bg-secondary">
-        <div className="max-w-content mx-auto px-md md:px-xl">
+      <SectionDivider from="black" to="white" />
+      <section className="relative z-10 overflow-hidden py-2xl md:py-3xl theme-light">
+        <AmbientBackground variant="light" />
+        <div className="relative z-10 max-w-content mx-auto px-md md:px-xl">
           <Reveal>
             <Eyebrow>WHAT WE BUILD</Eyebrow>
             <h2 className="text-[24px] md:text-[36px] font-bold tracking-display leading-[1.2] max-w-[1180px] mb-lg">
@@ -124,7 +132,9 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-2xl md:py-3xl">
+      <SectionDivider from="white" to="black" />
+      <section className="relative overflow-hidden py-2xl md:py-3xl">
+        <AmbientBackground variant="dark" />
         <div className="relative z-10 max-w-content mx-auto px-md md:px-xl">
           <Reveal>
             <Eyebrow>VISION</Eyebrow>
@@ -148,8 +158,10 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="relative z-10 py-2xl md:py-3xl bg-bg-secondary border-y border-border">
-        <div className="max-w-content mx-auto px-md md:px-xl">
+      <SectionDivider from="black" to="white" />
+      <section className="relative z-10 overflow-hidden py-2xl md:py-3xl theme-light border-y border-border">
+        <AmbientBackground variant="light" />
+        <div className="relative z-10 max-w-content mx-auto px-md md:px-xl">
           <Reveal>
             <Eyebrow>FOUNDER</Eyebrow>
             <h2 className="text-[24px] md:text-[36px] font-bold tracking-display">
@@ -162,7 +174,9 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-2xl md:py-3xl">
+      <SectionDivider from="white" to="black" />
+      <section className="relative overflow-hidden py-2xl md:py-3xl">
+        <AmbientBackground variant="dark" />
         <div className="relative z-10 max-w-content mx-auto px-md md:px-xl text-center">
           <Reveal>
             <p className="text-[18px] md:text-[22px] text-white/90">

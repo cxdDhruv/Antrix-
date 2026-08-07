@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
 import { MouseGlow } from "@/components/ui/MouseGlow";
+import { AmbientBackground } from "@/components/ui/AmbientBackground";
 
 export function MeasureHero() {
   const glowRef = useRef<HTMLDivElement>(null);
@@ -26,10 +27,11 @@ export function MeasureHero() {
 
   return (
     <section
-      className="precision-grid relative pt-[72px]"
+      className="precision-grid relative overflow-hidden pt-[72px]"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
+      <AmbientBackground variant="dark" />
       <MouseGlow ref={glowRef} />
       <div className="relative z-10 max-w-content mx-auto px-md md:px-xl pt-lg pb-2xl grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] gap-xl items-center">
         <div>

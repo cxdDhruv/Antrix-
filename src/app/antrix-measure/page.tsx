@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { MeasureHero } from "@/components/MeasureHero";
 import { Reveal } from "@/components/ui/Reveal";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
+import { AmbientBackground } from "@/components/ui/AmbientBackground";
+import { SectionDivider } from "@/components/ui/SectionDivider";
 
 export const metadata: Metadata = {
   title: "Antrix Measure — Diamond Measurement System | ±0.02mm Accuracy",
@@ -52,6 +55,21 @@ const features = [
   },
 ];
 
+const mentors = [
+  {
+    photo: "/images/rvg.jpg",
+    name: "Dr. Ravi Gandhi",
+    title: "Associate Professor, Department of Mechatronics",
+    college: "G.H. Patel College of Engineering and Technology",
+  },
+  {
+    photo: "/images/sms.jpg",
+    name: "Dr. Saurin Sheth",
+    title: "Assistant Professor, Department of Mechatronics",
+    college: "G.H. Patel College of Engineering and Technology",
+  },
+];
+
 export default function AntrixMeasurePage() {
   return (
     <main>
@@ -59,8 +77,10 @@ export default function AntrixMeasurePage() {
 
       <MeasureHero />
 
-      <section className="py-2xl md:py-3xl bg-bg-secondary">
-        <div className="max-w-content mx-auto px-md md:px-xl">
+      <SectionDivider from="black" to="white" />
+      <section className="relative overflow-hidden py-2xl md:py-3xl theme-light">
+        <AmbientBackground variant="light" />
+        <div className="relative z-10 max-w-content mx-auto px-md md:px-xl">
           <Reveal>
             <p className="max-w-[760px] text-[18px] md:text-[22px] leading-[1.7] text-white/90">
               The diamond industry runs on precision. A single millimeter of
@@ -81,8 +101,13 @@ export default function AntrixMeasurePage() {
         </div>
       </section>
 
-      <section id="specifications" className="py-2xl md:py-3xl scroll-mt-[72px]">
-        <div className="max-w-content mx-auto px-md md:px-xl">
+      <SectionDivider from="white" to="black" />
+      <section
+        id="specifications"
+        className="relative overflow-hidden py-2xl md:py-3xl scroll-mt-[72px]"
+      >
+        <AmbientBackground variant="dark" />
+        <div className="relative z-10 max-w-content mx-auto px-md md:px-xl">
           <Reveal>
             <Eyebrow>SPECIFICATIONS</Eyebrow>
             <h2 className="text-[28px] md:text-[48px] font-bold tracking-display leading-[1.1]">
@@ -112,8 +137,10 @@ export default function AntrixMeasurePage() {
         </div>
       </section>
 
-      <section className="py-2xl md:py-3xl bg-bg-secondary">
-        <div className="max-w-content mx-auto px-md md:px-xl">
+      <SectionDivider from="black" to="white" />
+      <section className="relative overflow-hidden py-2xl md:py-3xl theme-light">
+        <AmbientBackground variant="light" />
+        <div className="relative z-10 max-w-content mx-auto px-md md:px-xl">
           <Reveal>
             <Eyebrow>FEATURES</Eyebrow>
             <h2 className="text-[28px] md:text-[48px] font-bold tracking-display leading-[1.1]">
@@ -138,8 +165,55 @@ export default function AntrixMeasurePage() {
         </div>
       </section>
 
-      <section className="py-2xl md:py-3xl border-y border-border">
-        <div className="max-w-content mx-auto px-md md:px-xl text-center">
+      <SectionDivider from="white" to="black" />
+      <section className="relative overflow-hidden py-2xl md:py-3xl">
+        <AmbientBackground variant="dark" />
+        <div className="relative z-10 max-w-content mx-auto px-md md:px-xl">
+          <Reveal>
+            <Eyebrow>SPECIAL THANKS</Eyebrow>
+            <h2 className="text-[24px] md:text-[36px] font-bold tracking-display leading-[1.2] max-w-[720px]">
+              With Gratitude to Our Mentors.
+            </h2>
+            <p className="mt-md max-w-[720px] text-[16px] md:text-[18px] leading-[1.7] text-text-secondary">
+              Antrix Measure would not exist without the guidance, patience,
+              and technical direction of our mentors in the Department of
+              Mechatronics at G.H. Patel College of Engineering and
+              Technology.
+            </p>
+          </Reveal>
+
+          <div className="mt-xl grid grid-cols-1 md:grid-cols-2 gap-lg max-w-[680px]">
+            {mentors.map((mentor, i) => (
+              <Reveal key={mentor.name} delay={0.1 + i * 0.1}>
+                <div className="flex flex-col items-center text-center gap-md">
+                  <Image
+                    src={mentor.photo}
+                    alt={mentor.name}
+                    width={160}
+                    height={160}
+                    className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border border-border"
+                  />
+                  <div>
+                    <h3 className="text-[18px] font-semibold tracking-display">
+                      {mentor.name}
+                    </h3>
+                    <p className="mt-1 text-[14px] text-text-secondary">
+                      {mentor.title}
+                    </p>
+                    <p className="text-[14px] text-text-secondary">
+                      {mentor.college}
+                    </p>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="relative overflow-hidden py-2xl md:py-3xl border-y border-border">
+        <AmbientBackground variant="dark" />
+        <div className="relative z-10 max-w-content mx-auto px-md md:px-xl text-center">
           <Reveal>
             <h2 className="text-[28px] md:text-[48px] font-bold tracking-display leading-[1.1] max-w-[640px] mx-auto">
               See Antrix Measure in Action.

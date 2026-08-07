@@ -2,13 +2,16 @@
 
 import { useRef, type ReactNode } from "react";
 import { MouseGlow } from "@/components/ui/MouseGlow";
+import { AmbientBackground } from "@/components/ui/AmbientBackground";
 
 export function GlowSection({
   children,
   className = "",
+  variant = "dark",
 }: {
   children: ReactNode;
   className?: string;
+  variant?: "dark" | "light";
 }) {
   const glowRef = useRef<HTMLDivElement>(null);
 
@@ -29,10 +32,13 @@ export function GlowSection({
 
   return (
     <section
-      className={`precision-grid relative ${className}`}
+      className={`precision-grid relative overflow-hidden ${
+        variant === "light" ? "theme-light" : ""
+      } ${className}`}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
+      <AmbientBackground variant={variant} />
       <MouseGlow ref={glowRef} />
       {children}
     </section>

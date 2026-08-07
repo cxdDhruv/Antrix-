@@ -1,10 +1,12 @@
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
+import { AmbientBackground } from "@/components/ui/AmbientBackground";
 
 export function CtaBanner() {
   return (
-    <section className="py-2xl md:py-3xl border-y border-border">
-      <div className="max-w-content mx-auto px-md md:px-xl text-center">
+    <section className="relative overflow-hidden py-2xl md:py-3xl border-y border-border theme-light">
+      <AmbientBackground variant="light" />
+      <div className="relative z-10 max-w-content mx-auto px-md md:px-xl text-center">
         <Reveal>
           <h2 className="text-[28px] md:text-[48px] font-bold tracking-display leading-[1.1] max-w-[720px] mx-auto">
             Ready to See the Difference?

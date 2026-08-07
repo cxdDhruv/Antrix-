@@ -1,6 +1,7 @@
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
+import { AmbientBackground } from "@/components/ui/AmbientBackground";
 import { Check } from "lucide-react";
 
 const specs = [
@@ -15,8 +16,12 @@ const specs = [
 
 export function Products() {
   return (
-    <section id="products" className="py-2xl md:py-3xl bg-bg-secondary">
-      <div className="max-w-content mx-auto px-md md:px-xl">
+    <section
+      id="products"
+      className="relative overflow-hidden py-2xl md:py-3xl bg-bg-secondary"
+    >
+      <AmbientBackground variant="dark" />
+      <div className="relative z-10 max-w-content mx-auto px-md md:px-xl">
         <Reveal>
           <Eyebrow>OUR PRODUCTS</Eyebrow>
           <h2 className="text-[28px] md:text-[48px] font-bold tracking-display leading-[1.1]">

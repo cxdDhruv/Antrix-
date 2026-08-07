@@ -70,4 +70,84 @@ body {
       opacity: 0;
     }
   }
+
+  .theme-light {
+    background-color: #ffffff;
+    color: #0a0a0a;
+  }
+
+  .theme-light .text-text-secondary {
+    color: #4b4b4b !important;
+  }
+
+  .theme-light .text-white,
+  .theme-light .text-white\/90 {
+    color: #0a0a0a !important;
+  }
+
+  .theme-light .border-border {
+    border-color: #e2e2e2 !important;
+  }
+
+  .theme-light .bg-bg-secondary {
+    background-color: #f4f4f4 !important;
+  }
+
+  .theme-light .bg-bg-elevated,
+  .theme-light .hover\:bg-bg-elevated:hover {
+    background-color: #ececec !important;
+  }
+
+  .theme-light .border-white\/70 {
+    border-color: rgba(10, 10, 10, 0.55) !important;
+  }
+
+  .theme-light .hover\:bg-white:hover {
+    background-color: #0a0a0a !important;
+  }
+
+  .theme-light .hover\:text-black:hover {
+    color: #ffffff !important;
+  }
+
+  .theme-light .hover\:text-white:hover {
+    color: #0a0a0a !important;
+  }
+
+  .theme-light .hover\:border-white\/40:hover {
+    border-color: rgba(10, 10, 10, 0.4) !important;
+  }
+
+  @keyframes blob-float-1 {
+    0%,
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+    33% {
+      transform: translate(40px, -30px) scale(1.08);
+    }
+    66% {
+      transform: translate(-30px, 20px) scale(0.95);
+    }
+  }
+
+  @keyframes blob-float-2 {
+    0%,
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+    50% {
+      transform: translate(-50px, 30px) scale(1.1);
+    }
+  }
+
+  @keyframes blob-float-3 {
+    0%,
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+    50% {
+      transform: translate(25px, -25px) scale(1.15);
+    }
+  }
 }

@@ -1,5 +1,6 @@
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Reveal } from "@/components/ui/Reveal";
+import { AmbientBackground } from "@/components/ui/AmbientBackground";
 
 const points = [
   {
@@ -26,8 +27,9 @@ const points = [
 
 export function WhyAntrix() {
   return (
-    <section className="py-2xl md:py-3xl bg-bg-secondary">
-      <div className="max-w-content mx-auto px-md md:px-xl">
+    <section className="relative overflow-hidden py-2xl md:py-3xl bg-bg-secondary">
+      <AmbientBackground variant="dark" />
+      <div className="relative z-10 max-w-content mx-auto px-md md:px-xl">
         <Reveal>
           <Eyebrow>WHY ANTRIX</Eyebrow>
           <h2 className="text-[28px] md:text-[48px] font-bold tracking-display leading-[1.1]">
