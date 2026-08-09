@@ -63,7 +63,7 @@ const mentors = [
     college: "G.H. Patel College of Engineering and Technology",
   },
   {
-    photo: "/images/rvg.jpg",
+    photo: "/images/rvg.jpeg",
     name: "Dr. Ravi Gandhi",
     title: "Associate Professor, Department of Mechatronics",
     college: "G.H. Patel College of Engineering and Technology",
