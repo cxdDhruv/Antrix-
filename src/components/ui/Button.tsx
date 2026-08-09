@@ -14,7 +14,7 @@ export function Button({
   arrow?: boolean;
 }) {
   const base =
-    "inline-flex items-center gap-2 px-[28px] py-[14px] rounded-md text-[14px] md:text-[15px] font-semibold tracking-button transition-colors duration-200";
+    "tech-sheen inline-flex items-center gap-2 px-[28px] py-[14px] rounded-md text-[14px] md:text-[15px] font-semibold tracking-button transition-colors duration-200";
   const styles =
     variant === "solid"
       ? "bg-white text-black hover:bg-white/85"

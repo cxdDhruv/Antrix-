@@ -56,7 +56,7 @@ export function MeasureHero() {
           </div>
         </div>
 
-        <div className="img-zoom flex justify-center lg:justify-end lg:-mr-xl">
+        <div className="tech-sheen img-zoom flex justify-center lg:justify-end lg:-mr-xl">
           <Image
             src="/images/measure-product.png"
             alt="Antrix Measure device"

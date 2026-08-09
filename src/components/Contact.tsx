@@ -66,7 +66,7 @@ export function Contact() {
   }
 
   const inputClass =
-    "w-full bg-bg-secondary border border-border rounded-md px-4 py-3 text-[15px] text-white placeholder:text-text-muted focus:outline-none focus:border-white/50 transition-colors";
+    "w-full bg-bg-secondary border border-border rounded-md px-4 py-3 text-[15px] text-white placeholder:text-text-muted focus:outline-none focus:border-white/50 focus:shadow-[0_0_0_3px_rgba(255,255,255,0.08)] transition-all duration-200";
 
   return (
     <section id="contact" className="py-2xl md:py-3xl">

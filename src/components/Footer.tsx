@@ -48,7 +48,7 @@ export function Footer() {
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="text-[14px] text-text-secondary hover:text-white transition-colors"
+                      className="nav-link text-[14px] text-text-secondary hover:text-white transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -65,7 +65,7 @@ export function Footer() {
             <p className="text-[14px] text-text-secondary">Dhruv Jasani</p>
             <a
               href="mailto:info@antrix.solutions"
-              className="block mt-2 text-[14px] text-text-secondary hover:text-white transition-colors"
+              className="nav-link inline-block mt-2 text-[14px] text-text-secondary hover:text-white transition-colors"
             >
               info@antrix.solutions
             </a>

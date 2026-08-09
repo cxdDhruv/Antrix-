@@ -151,7 +151,7 @@ export default function SolutionsPage() {
           <div className="mt-md space-y-lg">
             {pillars.map((pillar, i) => (
               <Reveal key={pillar.tag} delay={i * 0.08}>
-                <div className="card-hover border border-border rounded-lg p-lg md:p-xl bg-bg-elevated">
+                <div className="tech-sheen card-hover border border-border rounded-lg p-lg md:p-xl bg-bg-elevated">
                   <div className="flex items-center gap-3">
                     <pillar.icon size={24} className="text-white" />
                     <span className="font-mono text-[11px] uppercase tracking-eyebrow text-text-muted">
@@ -172,7 +172,7 @@ export default function SolutionsPage() {
                     {pillar.applications.map((app) => (
                       <span
                         key={app}
-                        className="inline-block rounded-full border border-border px-4 py-2 text-[13px] text-text-secondary hover:border-white/40 hover:text-white transition-colors"
+                        className="tech-sheen inline-block rounded-full border border-border px-4 py-2 text-[13px] text-text-secondary hover:border-white/40 hover:text-white transition-colors"
                       >
                         {app}
                       </span>
@@ -198,7 +198,7 @@ export default function SolutionsPage() {
           <div className="mt-xl grid grid-cols-1 md:grid-cols-5 gap-lg">
             {process.map((step, i) => (
               <Reveal key={step.num} delay={i * 0.08}>
-                <div className="step-hover border-t border-border pt-md">
+                <div className="tech-sheen step-hover border-t border-border pt-md">
                   <span className="font-mono text-[13px] text-text-muted">
                     {step.num}
                   </span>
@@ -228,7 +228,7 @@ export default function SolutionsPage() {
           <div className="mt-xl grid grid-cols-1 md:grid-cols-2 gap-md">
             {audience.map((item, i) => (
               <Reveal key={item} delay={i * 0.06}>
-                <div className="card-hover flex items-start gap-3 border border-border rounded-lg p-lg h-full">
+                <div className="tech-sheen card-hover flex items-start gap-3 border border-border rounded-lg p-lg h-full">
                   <ArrowRight size={18} className="mt-1 shrink-0 text-white" />
                   <p className="text-[15px] leading-[1.7] text-text-secondary">
                     {item}

@@ -42,7 +42,7 @@ export function Capabilities() {
         <div className="mt-xl grid grid-cols-1 md:grid-cols-3 gap-md">
           {cards.map((card, i) => (
             <Reveal key={card.title} delay={i * 0.1}>
-              <div className="card-hover h-full border border-border rounded-lg bg-bg-secondary p-lg hover:bg-bg-elevated transition-colors">
+              <div className="tech-sheen card-hover h-full border border-border rounded-lg bg-bg-secondary p-lg hover:bg-bg-elevated transition-colors">
                 <card.icon size={28} className="text-white" />
                 <h3 className="mt-md text-[20px] font-semibold">
                   {card.title}

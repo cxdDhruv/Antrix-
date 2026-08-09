@@ -99,7 +99,7 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-md">
             <Reveal delay={0.05}>
-              <div className="card-hover border border-border rounded-lg p-lg h-full bg-bg-elevated">
+              <div className="tech-sheen card-hover border border-border rounded-lg p-lg h-full bg-bg-elevated">
                 <h3 className="text-[20px] font-semibold tracking-display">
                   Products
                 </h3>
@@ -112,7 +112,7 @@ export default function AboutPage() {
               </div>
             </Reveal>
             <Reveal delay={0.1}>
-              <div className="card-hover border border-border rounded-lg p-lg h-full bg-bg-elevated">
+              <div className="tech-sheen card-hover border border-border rounded-lg p-lg h-full bg-bg-elevated">
                 <h3 className="text-[20px] font-semibold tracking-display">
                   Custom Solutions
                 </h3>

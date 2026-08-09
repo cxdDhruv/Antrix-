@@ -7,6 +7,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
 import { AmbientBackground } from "@/components/ui/AmbientBackground";
+import { CountUp } from "@/components/ui/CountUp";
 
 export const metadata: Metadata = {
   title: "Antrix Measure — Diamond Measurement System | ±0.02mm Accuracy",
@@ -56,15 +57,15 @@ const features = [
 
 const mentors = [
   {
-    photo: "/images/rvg.jpg",
-    name: "Dr. Ravi Gandhi",
-    title: "Associate Professor, Department of Mechatronics",
-    college: "G.H. Patel College of Engineering and Technology",
-  },
-  {
     photo: "/images/sms.jpg",
     name: "Dr. Saurin Sheth",
     title: "Assistant Professor, Department of Mechatronics",
+    college: "G.H. Patel College of Engineering and Technology",
+  },
+  {
+    photo: "/images/rvg.jpg",
+    name: "Dr. Ravi Gandhi",
+    title: "Associate Professor, Department of Mechatronics",
     college: "G.H. Patel College of Engineering and Technology",
   },
 ];
@@ -112,7 +113,40 @@ export default function AntrixMeasurePage() {
             </h2>
           </Reveal>
 
-          <Reveal delay={0.1} className="mt-xl">
+          <Reveal delay={0.05} className="mt-xl">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-lg">
+              <div>
+                <div className="text-[36px] md:text-[48px] font-extrabold tracking-tighter">
+                  ±<CountUp to={0.02} decimals={2} suffix="mm" />
+                </div>
+                <p className="mt-1 text-[13px] text-text-secondary">Accuracy</p>
+              </div>
+              <div>
+                <div className="text-[36px] md:text-[48px] font-extrabold tracking-tighter">
+                  <CountUp to={9} />
+                </div>
+                <p className="mt-1 text-[13px] text-text-secondary">Cut Types</p>
+              </div>
+              <div>
+                <div className="text-[36px] md:text-[48px] font-extrabold tracking-tighter">
+                  <CountUp to={2.5} decimals={1} suffix="x" />
+                </div>
+                <p className="mt-1 text-[13px] text-text-secondary">
+                  Industry Precision
+                </p>
+              </div>
+              <div>
+                <div className="text-[36px] md:text-[48px] font-extrabold tracking-tighter">
+                  <CountUp to={100} suffix="%" />
+                </div>
+                <p className="mt-1 text-[13px] text-text-secondary">
+                  Automated
+                </p>
+              </div>
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.15} className="mt-xl">
             <div className="border border-border rounded-lg overflow-hidden">
               {specs.map((spec, i) => (
                 <div
@@ -147,7 +181,7 @@ export default function AntrixMeasurePage() {
           <div className="mt-xl grid grid-cols-1 md:grid-cols-2 gap-md">
             {features.map((feature, i) => (
               <Reveal key={feature.title} delay={i * 0.08}>
-                <div className="card-hover border border-border rounded-lg p-lg h-full bg-bg-elevated">
+                <div className="tech-sheen card-hover border border-border rounded-lg p-lg h-full bg-bg-elevated">
                   <h3 className="text-[20px] font-semibold tracking-display">
                     {feature.title}
                   </h3>
@@ -183,7 +217,7 @@ export default function AntrixMeasurePage() {
             {mentors.map((mentor, i) => (
               <Reveal key={mentor.name} delay={0.1 + i * 0.1}>
                 <div className="flex flex-col items-center text-center gap-md w-[220px]">
-                  <div className="img-zoom w-32 h-32 md:w-40 md:h-40 rounded-full border border-border">
+                  <div className="tech-sheen img-zoom w-32 h-32 md:w-40 md:h-40 rounded-full border border-border">
                     <Image
                       src={mentor.photo}
                       alt={mentor.name}

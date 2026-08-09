@@ -42,7 +42,7 @@ export function WhyAntrix() {
         <div className="mt-xl grid grid-cols-1 md:grid-cols-2 gap-md">
           {points.map((point, i) => (
             <Reveal key={point.num} delay={i * 0.1}>
-              <div className="card-hover border border-border rounded-lg p-lg h-full">
+              <div className="tech-sheen card-hover border border-border rounded-lg p-lg h-full">
                 <span className="font-mono text-[13px] text-text-muted">
                   {point.num}
                 </span>
