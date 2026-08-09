@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/Button";
 import { AmbientBackground } from "@/components/ui/AmbientBackground";
 
 export const metadata: Metadata = {
-  title: "About Antrix — Precision Machine Vision & Mechatronics",
+  title: "About Antrix | Precision Machine Vision & Mechatronics",
   description:
     "Antrix builds machine vision and mechatronics systems that give industries the ability to see, measure, and act with a level of precision no human process can consistently deliver.",
 };
@@ -68,7 +68,7 @@ export default function AboutPage() {
             </h2>
             <div className="mt-lg max-w-[1180px] space-y-sm text-[16px] md:text-[18px] leading-[1.7] text-text-secondary">
               <p>
-                We believe precision is not a luxury — it is a baseline.
+                We believe precision is not a luxury. It is a baseline.
               </p>
               <p>
                 We believe the physical world deserves the same level of
@@ -106,8 +106,8 @@ export default function AboutPage() {
                 <p className="mt-sm text-[15px] leading-[1.7] text-text-secondary">
                   Precision systems built for specific industry problems,
                   packaged and ready to deploy. Antrix Measure is our
-                  flagship — automated dimensional measurement for cut
-                  diamonds at ±0.02mm accuracy.
+                  flagship, delivering automated dimensional measurement for
+                  cut diamonds at ±0.02mm accuracy.
                 </p>
               </div>
             </Reveal>
@@ -118,7 +118,7 @@ export default function AboutPage() {
                 </h3>
                 <p className="mt-sm text-[15px] leading-[1.7] text-text-secondary">
                   If your industry has a measurement, inspection, sorting, or
-                  automation problem that off-the-shelf tools cannot solve —
+                  automation problem that off-the-shelf tools cannot solve,
                   we build it from the ground up. Machine vision.
                   Mechatronics. Complete systems. Any industry.
                 </p>
@@ -141,7 +141,7 @@ export default function AboutPage() {
               problem waiting to be solved.
             </p>
             <p className="mt-md max-w-[1100px] text-[16px] md:text-[18px] leading-[1.7] text-text-secondary">
-              Antrix is building the systems to solve them — one product, one
+              Antrix is building the systems to solve them, one product, one
               solution, one industry at a time.
             </p>
             <p className="mt-md text-[18px] md:text-[22px] font-semibold text-white">

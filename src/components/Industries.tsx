@@ -31,7 +31,7 @@ export function Industries() {
           </h2>
           <p className="mt-lg max-w-[640px] text-[16px] md:text-[18px] leading-[1.7] text-text-secondary">
             Our systems are built for industries where precision is not a
-            preference — it&apos;s a requirement. If your process involves
+            preference. It&apos;s a requirement. If your process involves
             measurement, inspection, sorting, or automation of physical
             objects, Antrix can engineer a solution for it.
           </p>

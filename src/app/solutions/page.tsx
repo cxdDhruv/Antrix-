@@ -9,9 +9,9 @@ import { Button } from "@/components/ui/Button";
 import { AmbientBackground } from "@/components/ui/AmbientBackground";
 
 export const metadata: Metadata = {
-  title: "Solutions — Custom Machine Vision, Mechatronics & Robotics | Antrix",
+  title: "Solutions | Custom Machine Vision, Mechatronics & Robotics | Antrix",
   description:
-    "Antrix designs and builds custom precision systems for industries that need more than off-the-shelf tools. Computer vision, mechatronics, and robotics — engineered as one.",
+    "Antrix designs and builds custom precision systems for industries that need more than off-the-shelf tools. Computer vision, mechatronics, and robotics, engineered as one.",
 };
 
 const pillars = [
@@ -19,7 +19,7 @@ const pillars = [
     icon: Eye,
     tag: "COMPUTER VISION",
     title: "See What Standard Systems Miss.",
-    body: "We build custom computer vision systems that detect, measure, classify, inspect, and track — in real time, at industrial scale, under real-world conditions. If your process involves any object that needs to be seen, analyzed, or verified by a machine — we build the system that does it with precision.",
+    body: "We build custom computer vision systems that detect, measure, classify, inspect, and track in real time, at industrial scale, under real-world conditions. If your process involves any object that needs to be seen, analyzed, or verified by a machine, we build the system that does it with precision.",
     applications: [
       "Diamond & Gemstone Grading Automation",
       "Sub-Millimeter Dimensional Measurement",
@@ -35,7 +35,7 @@ const pillars = [
     icon: Cpu,
     tag: "MECHATRONICS",
     title: "Hardware and Software. Engineered as One.",
-    body: "We don't just write code for someone else's machine. We engineer the complete system — mechanical design, electronics, embedded firmware, sensors, actuators, and control logic — built together from day one. The result is a system that works as one precise unit, not a collection of parts that barely communicate.",
+    body: "We don't just write code for someone else's machine. We engineer the complete system, mechanical design, electronics, embedded firmware, sensors, actuators, and control logic, built together from day one. The result is a system that works as one precise unit, not a collection of parts that barely communicate.",
     applications: [
       "Custom Precision Measurement Instruments",
       "Automated Inspection Stations",
@@ -51,7 +51,7 @@ const pillars = [
     icon: Bot,
     tag: "ROBOTICS",
     title: "Motion with Intelligence.",
-    body: "We design and build robotic systems that combine mechanical precision with machine intelligence. From robotic arms to autonomous guided systems — our robots are built to perform repeatable, precise tasks that human operators cannot maintain at scale.",
+    body: "We design and build robotic systems that combine mechanical precision with machine intelligence. From robotic arms to autonomous guided systems, our robots are built to perform repeatable, precise tasks that human operators cannot maintain at scale.",
     applications: [
       "Robotic Pick & Place Systems",
       "Eye-in-Hand Vision-Guided Robots",
@@ -69,12 +69,12 @@ const process = [
   {
     num: "01",
     title: "CONSULT",
-    body: "You bring the problem. We ask the hard questions — tolerances, throughput, environment, constraints. No assumptions. No guesswork.",
+    body: "You bring the problem. We ask the hard questions, tolerances, throughput, environment, constraints. No assumptions. No guesswork.",
   },
   {
     num: "02",
     title: "DESIGN",
-    body: "We engineer a solution built specifically for your process. Every component — mechanical, electronic, software — designed together, not assembled separately.",
+    body: "We engineer a solution built specifically for your process. Every component, mechanical, electronic, software, designed together, not assembled separately.",
   },
   {
     num: "03",
@@ -89,15 +89,15 @@ const process = [
   {
     num: "05",
     title: "SUPPORT",
-    body: "We stand behind what we build. Long-term support, maintenance, and upgrades — on your terms.",
+    body: "We stand behind what we build. Long-term support, maintenance, and upgrades, always on your terms.",
   },
 ];
 
 const audience = [
   "Manufacturers who need automated inspection at a scale human operators cannot sustain.",
   "Processing industries where measurement error directly costs money or reputation.",
-  "Engineering teams who have a specific problem and need a partner who can build the solution from ground up — not sell them a generic product.",
-  "Companies entering automation for the first time who need a system that works on day one — not a year of integration headaches.",
+  "Engineering teams who have a specific problem and need a partner who can build the solution from ground up, not sell them a generic product.",
+  "Companies entering automation for the first time who need a system that works on day one, not a year of integration headaches.",
 ];
 
 const industries = [
@@ -135,7 +135,7 @@ export default function SolutionsPage() {
           <p className="mt-lg max-w-[1100px] text-[16px] md:text-[18px] leading-[1.7] text-text-secondary">
             Antrix designs and builds custom precision systems for
             industries that need more than what standard tools offer. If it
-            involves vision, motion, or intelligence in the physical world —
+            involves vision, motion, or intelligence in the physical world,
             we can engineer it.
           </p>
         </div>
@@ -242,7 +242,7 @@ export default function SolutionsPage() {
             <p className="mt-xl text-[18px] md:text-[22px] font-semibold text-white">
               Any industry. Any scale. Any problem.
               <br />
-              If precision matters — Antrix can build it.
+              If precision matters, Antrix can build it.
             </p>
           </Reveal>
         </div>
@@ -272,7 +272,7 @@ export default function SolutionsPage() {
             </h2>
             <p className="mt-lg max-w-[560px] mx-auto text-[16px] md:text-[18px] leading-[1.7] text-text-secondary">
               Tell us what you&apos;re trying to solve. If it involves
-              machine vision, mechatronics, or robotics — we&apos;ll tell you
+              machine vision, mechatronics, or robotics, we&apos;ll tell you
               exactly how we&apos;d build it.
             </p>
             <div className="mt-xl flex justify-center">

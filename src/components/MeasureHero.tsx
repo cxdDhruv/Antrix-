@@ -35,7 +35,7 @@ export function MeasureHero() {
       <MouseGlow ref={glowRef} />
       <div className="relative z-10 max-w-content mx-auto px-md md:px-xl pt-lg pb-2xl grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] gap-xl items-center">
         <div>
-          <Eyebrow>ANTRIX MEASURE — FLAGSHIP PRODUCT</Eyebrow>
+          <Eyebrow>ANTRIX MEASURE · FLAGSHIP PRODUCT</Eyebrow>
           <h1 className="text-[40px] md:text-[56px] font-extrabold leading-[1.05] tracking-tighter">
             Precision Has
             <br />

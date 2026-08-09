@@ -12,9 +12,9 @@ export function CtaBanner() {
             Ready to See the Difference?
           </h2>
           <p className="mt-lg max-w-[560px] mx-auto text-[16px] md:text-[18px] leading-[1.7] text-text-secondary">
-            Whether you need Antrix Measure or a custom-engineered solution
-            for your process — let&apos;s talk. A 30-minute conversation is
-            all it takes to know if we&apos;re the right fit.
+            Whether you need Antrix Measure or a fully custom-engineered
+            solution, let&apos;s talk. A single 30-minute conversation is all
+            it takes to know if we&apos;re the right fit.
           </p>
           <div className="mt-xl flex justify-center">
             <Button href="/#contact" arrow>

@@ -14,13 +14,12 @@ export function About() {
         <Reveal>
           <Eyebrow>WHO WE ARE</Eyebrow>
           <h2 className="text-[28px] md:text-[48px] font-bold tracking-display leading-[1.1] max-w-[720px]">
-            We build systems that see, measure, and act — precisely.
+            We build systems that see, measure, and act with total precision.
           </h2>
           <p className="mt-lg max-w-[640px] text-[16px] md:text-[18px] leading-[1.7] text-text-secondary">
-            Antrix is a machine vision and mechatronics company building
-            intelligent precision systems for the physical world. From
-            flagship products to custom-engineered solutions, we solve
-            problems that require more than human eyes.
+            Antrix engineers intelligent precision systems for the physical
+            world. From flagship products to fully custom builds, we solve
+            problems that demand more than human eyes can deliver.
           </p>
           <p className="mt-md text-[16px] md:text-[18px] leading-[1.7] text-text-secondary">
             Based in Surat, Gujarat, India. Built for the world.

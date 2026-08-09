@@ -6,17 +6,17 @@ const points = [
   {
     num: "01",
     title: "Precision as a Baseline",
-    body: 'Not "approximately." Not "close enough." Every system we build is engineered to a hard precision spec — not a best-effort guess.',
+    body: 'Not "approximately." Not "close enough." Every system we build is engineered to a hard precision spec, never a best-effort guess.',
   },
   {
     num: "02",
     title: "Hardware + Software, Together",
-    body: "We don't just write code for someone else's camera. We engineer the complete system — optics, mechanics, electronics, and software as one unit.",
+    body: "We don't just write code for someone else's camera. We engineer the complete system, optics, mechanics, electronics, and software, as one unit.",
   },
   {
     num: "03",
     title: "Built for Real Environments",
-    body: "Factory floors are not labs. Our systems are designed for real lighting, real vibration, and real operators — not ideal conditions.",
+    body: "Factory floors are not labs. Our systems are designed for real lighting, real vibration, and real operators, not ideal conditions.",
   },
   {
     num: "04",

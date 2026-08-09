@@ -6,7 +6,7 @@ import { Check } from "lucide-react";
 
 const specs = [
   "±0.02mm Measurement Accuracy",
-  "9 Cut Types — Round + 8 Fancy Cuts",
+  "9 Cut Types (Round + 8 Fancy Cuts)",
   "Single & Multi-Stone Measurement",
   "LED-Guided Bin Placement",
   "Automatic Shape Classification",
@@ -47,8 +47,8 @@ export function Products() {
             <p className="mt-md max-w-[720px] text-[16px] leading-[1.7] text-text-secondary">
               Antrix Measure is an automated machine vision system that
               measures the precise dimensions of cut diamonds across 9 cut
-              types — faster, more accurately, and more consistently than
-              any manual process. Built for diamond processors, sorters, and
+              types. Faster, more accurately, and more consistently than any
+              manual process. Built for diamond processors, sorters, and
               quality labs that need measurement data they can trust
               completely.
             </p>

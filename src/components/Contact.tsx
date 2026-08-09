@@ -29,7 +29,7 @@ export function Contact() {
     try {
       const payload = new FormData();
       payload.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_KEY ?? "");
-      payload.append("subject", `Demo Request — ${form.need}`);
+      payload.append("subject", `Demo Request for ${form.need}`);
       payload.append("from_name", "Antrix Website");
       payload.append("name", form.name);
       payload.append("email", form.email);
@@ -174,7 +174,7 @@ export function Contact() {
 
             {status === "success" && (
               <p className="text-[14px] text-white/90">
-                Thanks — your message has been sent. We&apos;ll get back to
+                Thanks! Your message has been sent. We&apos;ll get back to
                 you shortly.
               </p>
             )}

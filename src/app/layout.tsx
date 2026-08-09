@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     "Antrix Measure",
   ],
   openGraph: {
-    title: "Antrix — Machine Vision & Mechatronics | Built for What's Next",
+    title: "Antrix | Machine Vision & Mechatronics | Built for What's Next",
     description:
       "Antrix builds precision machine vision and mechatronics systems for industries that cannot afford to be wrong.",
     images: ["/images/logo.png"],

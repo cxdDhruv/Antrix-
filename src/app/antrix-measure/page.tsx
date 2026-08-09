@@ -10,7 +10,7 @@ import { AmbientBackground } from "@/components/ui/AmbientBackground";
 import { CountUp } from "@/components/ui/CountUp";
 
 export const metadata: Metadata = {
-  title: "Antrix Measure — Diamond Measurement System | ±0.02mm Accuracy",
+  title: "Antrix Measure | Diamond Measurement System | ±0.02mm Accuracy",
   description:
     "Antrix Measure delivers automated dimensional measurement for cut diamonds with ±0.02mm accuracy across 9 cut types. Request a demo.",
   keywords: [
@@ -35,15 +35,15 @@ const specs = [
 const features = [
   {
     title: "Industry-Leading Accuracy",
-    body: "±0.02mm. That is not a rounded figure — it is a hard engineering specification. 2.5x more precise than the industry standard. Built for buyers who cannot afford to be approximately right.",
+    body: "±0.02mm. That is not a rounded figure. It is a hard engineering specification, 2.5x more precise than the industry standard. Built for buyers who cannot afford to be approximately right.",
   },
   {
     title: "9-Cut Automatic Classification",
-    body: "Round, Oval, Pear, Marquise, Princess, Emerald, Cushion, Heart, Radiant — Antrix Measure classifies and measures all 9 cut types automatically. No manual selection required.",
+    body: "Round, Oval, Pear, Marquise, Princess, Emerald, Cushion, Heart, Radiant. Antrix Measure classifies and measures all 9 cut types automatically. No manual selection required.",
   },
   {
     title: "LED-Guided Bin Sorting",
-    body: "Once a stone is measured, an LED lights up on the correct bin — the operator simply places it there. No manual lookup, no guesswork, no sorting errors.",
+    body: "Once a stone is measured, an LED lights up on the correct bin, and the operator simply places it there. No manual lookup, no guesswork, no sorting errors.",
   },
   {
     title: "Precision Optical Calibration",
@@ -51,7 +51,7 @@ const features = [
   },
   {
     title: "Multi-Stone Batch Measurement",
-    body: "Measure multiple stones in a single session. Built for the throughput demands of real diamond processing operations — not just lab demonstrations.",
+    body: "Measure multiple stones in a single session. Built for the throughput demands of real diamond processing operations, not just lab demonstrations.",
   },
 ];
 

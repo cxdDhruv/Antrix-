@@ -11,7 +11,7 @@ const steps = [
   {
     num: "02",
     title: "ENGINEER",
-    body: "Our team designs the vision pipeline, mechanical system, and software stack — built specifically for your environment.",
+    body: "Our team designs the vision pipeline, mechanical system, and software stack, built specifically for your environment.",
   },
   {
     num: "03",

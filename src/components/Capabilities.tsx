@@ -8,17 +8,17 @@ const cards = [
   {
     icon: Eye,
     title: "Machine Vision Systems",
-    body: "We build computer vision pipelines that detect, measure, classify, and inspect — in real time, at industrial scale. Our systems see what human eyes and standard cameras miss.",
+    body: "We build computer vision pipelines that detect, measure, classify, and inspect in real time, at industrial scale. Our systems see what human eyes and standard cameras miss completely.",
   },
   {
     icon: Cpu,
     title: "Mechatronics Engineering",
-    body: "Hardware and software, designed together. We engineer complete systems — mechanical design, electronics, embedded firmware, and control logic — that work as one precise unit.",
+    body: "Hardware and software, designed together. We engineer complete systems, spanning mechanical design, electronics, embedded firmware, and control logic, that work as one precise unit.",
   },
   {
     icon: Wrench,
     title: "Custom Solutions",
-    body: "Every industry has a problem that standard tools can't solve. We work with clients to design and build custom machine vision and mechatronics solutions — from concept to deployment.",
+    body: "Every industry has a problem that standard tools can't solve. We partner with clients to design and build custom machine vision and mechatronics solutions, from first concept to full deployment.",
   },
 ];
 
