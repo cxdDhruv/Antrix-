@@ -4,7 +4,10 @@ import Link from "next/link";
 const columns = [
   {
     title: "Products",
-    links: [{ label: "Antrix Measure", href: "/antrix-measure" }],
+    links: [
+      { label: "Antrix Measure", href: "/antrix-measure" },
+      { label: "Antrix AWM", href: "/antrix-awm" },
+    ],
   },
   {
     title: "Solutions",

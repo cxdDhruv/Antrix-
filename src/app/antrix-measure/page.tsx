@@ -10,9 +10,9 @@ import { AmbientBackground } from "@/components/ui/AmbientBackground";
 import { CountUp } from "@/components/ui/CountUp";
 
 export const metadata: Metadata = {
-  title: "Antrix Measure | Diamond Measurement System | ±0.02mm Accuracy",
+  title: "Antrix Measure | Diamond Measurement System | ±0.01mm Accuracy",
   description:
-    "Antrix Measure delivers automated dimensional measurement for cut diamonds with ±0.02mm accuracy across 9 cut types. Request a demo.",
+    "Antrix Measure delivers automated dimensional measurement for cut diamonds with ±0.01mm accuracy across 9 cut types. Request a demo.",
   keywords: [
     "diamond measurement system",
     "cut diamond dimensions",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 };
 
 const specs = [
-  { label: "Measurement Accuracy", value: "±0.02mm" },
+  { label: "Measurement Accuracy", value: "±0.01mm" },
   { label: "Supported Cut Types", value: "9 (Round + 8 Fancy Cuts)" },
   { label: "Measurement Mode", value: "Single Stone + Multi-Stone Batch" },
   { label: "Calibration", value: "High-Precision Optical System" },
@@ -35,7 +35,7 @@ const specs = [
 const features = [
   {
     title: "Industry-Leading Accuracy",
-    body: "±0.02mm. That is not a rounded figure. It is a hard engineering specification, 2.5x more precise than the industry standard. Built for buyers who cannot afford to be approximately right.",
+    body: "±0.01mm. That is not a rounded figure. It is a hard engineering specification, 5x more precise than the industry standard. Built for buyers who cannot afford to be approximately right.",
   },
   {
     title: "9-Cut Automatic Classification",
@@ -117,7 +117,7 @@ export default function AntrixMeasurePage() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-lg">
               <div>
                 <div className="text-[36px] md:text-[48px] font-extrabold tracking-tighter">
-                  ±<CountUp to={0.02} decimals={2} suffix="mm" />
+                  ±<CountUp to={0.01} decimals={2} suffix="mm" />
                 </div>
                 <p className="mt-1 text-[13px] text-text-secondary">Accuracy</p>
               </div>
@@ -129,7 +129,7 @@ export default function AntrixMeasurePage() {
               </div>
               <div>
                 <div className="text-[36px] md:text-[48px] font-extrabold tracking-tighter">
-                  <CountUp to={2.5} decimals={1} suffix="x" />
+                  <CountUp to={5} suffix="x" />
                 </div>
                 <p className="mt-1 text-[13px] text-text-secondary">
                   Industry Precision
@@ -253,7 +253,7 @@ export default function AntrixMeasurePage() {
             </h2>
             <p className="mt-lg max-w-[520px] mx-auto text-[16px] md:text-[18px] leading-[1.7] text-text-secondary">
               A 30-minute live demonstration is the fastest way to understand
-              what ±0.02mm accuracy looks like in practice.
+              what ±0.01mm accuracy looks like in practice.
             </p>
             <div className="mt-xl flex justify-center">
               <Button href="/#contact" arrow>

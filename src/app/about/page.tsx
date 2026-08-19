@@ -107,7 +107,7 @@ export default function AboutPage() {
                   Precision systems built for specific industry problems,
                   packaged and ready to deploy. Antrix Measure is our
                   flagship, delivering automated dimensional measurement for
-                  cut diamonds at ±0.02mm accuracy.
+                  cut diamonds at ±0.01mm accuracy.
                 </p>
               </div>
             </Reveal>

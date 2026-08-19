@@ -153,6 +153,7 @@ export function Contact() {
               onChange={(e) => setForm({ ...form, need: e.target.value })}
             >
               <option>Antrix Measure Demo</option>
+              <option>Antrix AWM Inquiry</option>
               <option>Custom Machine Vision Solution</option>
               <option>Custom Mechatronics Solution</option>
               <option>General Inquiry</option>
