@@ -28,30 +28,29 @@ const columns = [
 
 export function Footer() {
   return (
-    <footer className="relative z-10 border-t border-border bg-bg-primary py-2xl">
+    <footer className="relative z-10 bg-[#0a0a0a] border-t border-white/10 pt-2xl pb-lg">
       <div className="max-w-content mx-auto px-md md:px-xl">
-        <div className="flex items-center gap-3">
-          <Image src="/images/logo.png" alt="Antrix" width={56} height={56} className="w-12 h-12 md:w-14 md:h-14" />
-          <span className="text-[20px] md:text-[22px] font-semibold tracking-tighter">
-            ANTRIX
-          </span>
-        </div>
-        <p className="mt-xs text-[15px] text-text-secondary">
-          Built for What&apos;s Next.
-        </p>
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-lg">
+          <div className="col-span-2">
+            <div className="flex items-center gap-2">
+              <Image src="/images/logo.png" alt="Antrix" width={36} height={36} className="w-9 h-9" />
+              <span className="text-[16px] font-semibold tracking-[0.2em]">ANTRIX</span>
+            </div>
+            <p className="mt-md max-w-[320px] text-[14px] leading-[1.6] text-white/50">
+              Precision machine vision and mechatronics. Built for what&apos;s
+              next.
+            </p>
+          </div>
 
-        <div className="mt-xl grid grid-cols-2 md:grid-cols-4 gap-lg max-w-[760px]">
           {columns.map((col) => (
             <div key={col.title}>
-              <h4 className="text-[13px] font-semibold text-white mb-sm">
-                {col.title}
-              </h4>
+              <h4 className="text-[12px] font-semibold text-white mb-sm">{col.title}</h4>
               <ul className="space-y-2">
                 {col.links.map((link) => (
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="nav-link text-[14px] text-text-secondary hover:text-white transition-colors"
+                      className="text-[12px] text-white/50 hover:text-white transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -60,25 +59,16 @@ export function Footer() {
               </ul>
             </div>
           ))}
-
-          <div>
-            <h4 className="text-[13px] font-semibold text-white mb-sm">
-              Founder
-            </h4>
-            <p className="text-[14px] text-text-secondary">Dhruv Jasani</p>
-            <a
-              href="mailto:info@antrix.solutions"
-              className="nav-link inline-block mt-2 text-[14px] text-text-secondary hover:text-white transition-colors"
-            >
-              info@antrix.solutions
-            </a>
-          </div>
         </div>
 
-        <div className="mt-2xl pt-lg border-t border-border text-[13px] text-text-muted">
-          © 2025 Antrix. All rights reserved.
-          <br />
-          Surat, Gujarat, India.
+        <div className="mt-2xl pt-md border-t border-white/10 flex flex-col md:flex-row md:items-center md:justify-between gap-xs text-[12px] text-white/40">
+          <span>Copyright © 2026 Antrix. All rights reserved.</span>
+          <span>
+            Surat, Gujarat, India ·{" "}
+            <a href="mailto:info@antrix.solutions" className="hover:text-white">
+              info@antrix.solutions
+            </a>
+          </span>
         </div>
       </div>
     </footer>

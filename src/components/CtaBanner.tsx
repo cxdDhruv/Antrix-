@@ -1,28 +1,54 @@
+import Link from "next/link";
+import { ChevronRight } from "lucide-react";
 import { Reveal } from "@/components/ui/Reveal";
-import { Button } from "@/components/ui/Button";
-import { AmbientBackground } from "@/components/ui/AmbientBackground";
 
-export function CtaBanner() {
+export function CtaBanner({
+  lines = ["Ready to see", "the difference?"],
+  sub = "One 30-minute conversation is all it takes to know if we're the right fit.",
+  primary = { href: "/#contact", label: "Request a demo" },
+  secondary = { href: "/solutions", label: "Explore solutions" },
+}: {
+  lines?: [string, string];
+  sub?: string;
+  primary?: { href: string; label: string };
+  secondary?: { href: string; label: string } | null;
+}) {
   return (
-    <section className="relative overflow-hidden py-2xl md:py-3xl border-y border-border theme-light">
-      <AmbientBackground variant="light" />
-      <div className="relative z-10 max-w-content mx-auto px-md md:px-xl text-center">
-        <Reveal>
-          <h2 className="text-[28px] md:text-[48px] font-bold tracking-display leading-[1.1] max-w-[720px] mx-auto">
-            Ready to See the Difference?
-          </h2>
-          <p className="mt-lg max-w-[560px] mx-auto text-[16px] md:text-[18px] leading-[1.7] text-text-secondary">
-            Whether you need Antrix Measure or a fully custom-engineered
-            solution, let&apos;s talk. A single 30-minute conversation is all
-            it takes to know if we&apos;re the right fit.
-          </p>
-          <div className="mt-xl flex justify-center">
-            <Button href="/#contact" arrow>
-              Request a Demo
-            </Button>
-          </div>
-        </Reveal>
-      </div>
+    <section className="relative overflow-hidden bg-black py-2xl md:py-3xl">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[1100px] h-[600px] bg-[radial-gradient(closest-side,rgba(255,255,255,0.12),transparent)]"
+      />
+      <Reveal className="relative max-w-content mx-auto px-md md:px-xl text-center">
+        <h2 className="text-[48px] md:text-[112px] font-semibold tracking-tightest leading-[0.95] bg-gradient-to-b from-white to-white/45 bg-clip-text text-transparent">
+          {lines[0]}
+          <br />
+          {lines[1]}
+        </h2>
+        <p className="mt-lg mx-auto max-w-[560px] text-[17px] md:text-[21px] leading-[1.5] text-text-secondary">
+          {sub}
+        </p>
+        <div className="mt-xl flex flex-wrap items-center justify-center gap-x-lg gap-y-md">
+          <Link
+            href={primary.href}
+            className="rounded-full bg-white px-[30px] py-[14px] text-[17px] font-medium text-black transition-transform duration-300 hover:scale-[1.04]"
+          >
+            {primary.label}
+          </Link>
+          {secondary && (
+            <Link
+              href={secondary.href}
+              className="group inline-flex items-center gap-1 text-[17px] font-medium text-white"
+            >
+              {secondary.label}
+              <ChevronRight
+                size={18}
+                className="transition-transform duration-300 group-hover:translate-x-1"
+              />
+            </Link>
+          )}
+        </div>
+      </Reveal>
     </section>
   );
 }

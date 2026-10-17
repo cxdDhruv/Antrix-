@@ -1,6 +1,4 @@
-import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Reveal } from "@/components/ui/Reveal";
-import { AmbientBackground } from "@/components/ui/AmbientBackground";
 
 const industries = [
   "Diamond Processing",
@@ -15,45 +13,52 @@ const industries = [
   "Gemology Labs",
 ];
 
-export function Industries() {
-  const loop = [...industries, ...industries];
-
+export function Row({ items, outline }: { items: string[]; outline?: boolean }) {
+  const loop = [...items, ...items];
   return (
-    <section className="relative py-2xl md:py-3xl bg-bg-secondary overflow-hidden">
-      <AmbientBackground variant="dark" />
-      <div className="relative z-10 max-w-content mx-auto px-md md:px-xl">
+    <div className="overflow-hidden">
+      <div
+        className={`flex w-max ${outline ? "ticker-track-reverse" : "ticker-track"}`}
+      >
+        {loop.map((name, i) => (
+          <span
+            key={`${name}-${i}`}
+            className={`px-md md:px-lg whitespace-nowrap text-[44px] md:text-[96px] font-semibold tracking-tighter leading-[1.15] ${
+              outline ? "text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.45)]" : "text-white"
+            }`}
+          >
+            {name}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export function Industries() {
+  const half = Math.ceil(industries.length / 2);
+  return (
+    <section className="bg-black py-2xl md:py-3xl overflow-hidden">
+      <div className="max-w-content mx-auto px-md md:px-xl">
         <Reveal>
-          <Eyebrow>WHO WE SERVE</Eyebrow>
-          <h2 className="text-[28px] md:text-[48px] font-bold tracking-display leading-[1.1]">
-            Any Industry.
-            <br />
-            Any Problem.
-          </h2>
-          <p className="mt-lg max-w-[640px] text-[16px] md:text-[18px] leading-[1.7] text-text-secondary">
-            Our systems are built for industries where precision is not a
-            preference. It&apos;s a requirement. If your process involves
-            measurement, inspection, sorting, or automation of physical
-            objects, Antrix can engineer a solution for it.
+          <p className="text-[15px] md:text-[17px] font-semibold text-text-secondary">
+            Who we serve
           </p>
-          <p className="mt-md max-w-[640px] text-[16px] md:text-[18px] font-semibold text-white">
-            Whatever your industry, we can build the machine vision and
-            mechatronics solution for it.
+          <h2 className="mt-xs text-[40px] md:text-[80px] font-semibold tracking-tightest leading-[1]">
+            Any industry.
+            <br />
+            <span className="text-white/40">Any problem.</span>
+          </h2>
+          <p className="mt-lg max-w-[620px] text-[17px] md:text-[19px] leading-[1.6] text-text-secondary">
+            If your process involves measurement, inspection, sorting or
+            automation of physical objects, Antrix can engineer the solution.
           </p>
         </Reveal>
       </div>
 
-      <div className="relative z-10 mt-xl">
-        <div className="flex w-max ticker-track">
-          {loop.map((industry, i) => (
-            <div
-              key={`${industry}-${i}`}
-              className="flex items-center px-md whitespace-nowrap text-[16px] md:text-[20px] text-text-secondary"
-            >
-              {industry}
-              <span className="mx-md text-text-muted">·</span>
-            </div>
-          ))}
-        </div>
+      <div className="mt-2xl space-y-sm">
+        <Row items={industries.slice(0, half)} />
+        <Row items={industries.slice(half)} outline />
       </div>
     </section>
   );

@@ -1,72 +1,32 @@
 "use client";
 
-import { useRef } from "react";
 import Image from "next/image";
-import { Eyebrow } from "@/components/ui/Eyebrow";
-import { Button } from "@/components/ui/Button";
-import { MouseGlow } from "@/components/ui/MouseGlow";
-import { AmbientBackground } from "@/components/ui/AmbientBackground";
+import { ArrowLink, PageHero, PillLink } from "@/components/ui/kit";
 
 export function MeasureHero() {
-  const glowRef = useRef<HTMLDivElement>(null);
-
-  function handleMouseMove(e: React.MouseEvent<HTMLElement>) {
-    const rect = e.currentTarget.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    if (glowRef.current) {
-      glowRef.current.style.background = `radial-gradient(500px circle at ${x}px ${y}px, rgba(255,255,255,0.14), transparent 70%)`;
-    }
-  }
-
-  function handleMouseLeave() {
-    if (glowRef.current) {
-      glowRef.current.style.background = "transparent";
-    }
-  }
-
   return (
-    <section
-      className="precision-grid relative overflow-hidden pt-[72px]"
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-    >
-      <AmbientBackground variant="dark" />
-      <MouseGlow ref={glowRef} />
-      <div className="relative z-10 max-w-content mx-auto px-md md:px-xl pt-lg pb-2xl grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] gap-xl items-center">
-        <div>
-          <Eyebrow>ANTRIX MEASURE · FLAGSHIP PRODUCT</Eyebrow>
-          <h1 className="text-[40px] md:text-[56px] font-extrabold leading-[1.05] tracking-tighter">
-            Precision Has
-            <br />
-            a New Name.
-          </h1>
-          <p className="mt-lg max-w-[520px] text-[16px] md:text-[18px] leading-[1.7] text-text-secondary">
-            Automated dimensional measurement for cut diamonds. ±0.01mm
-            accuracy across 9 cut types. Built for diamond processors who
-            demand the exact truth.
-          </p>
-          <div className="mt-xl flex flex-wrap gap-md">
-            <Button href="/#contact" arrow>
-              Request a Demo
-            </Button>
-            <Button href="#specifications" variant="ghost">
-              View Specifications
-            </Button>
-          </div>
-        </div>
-
-        <div className="tech-sheen img-zoom flex justify-center lg:justify-end lg:-mr-xl">
+    <PageHero
+      eyebrow="Antrix Measure"
+      lines={["Precision has", "a new name."]}
+      sub="Automated dimensional measurement for cut diamonds. ±0.01mm accuracy across 9 cut types."
+      ctas={
+        <>
+          <PillLink href="/#contact">Request a demo</PillLink>
+          <ArrowLink href="#specifications">View specifications</ArrowLink>
+        </>
+      }
+      media={
+        <div className="absolute inset-x-[8%] inset-y-[7%]">
           <Image
             src="/images/measure-product.png"
             alt="Antrix Measure device"
-            width={1024}
-            height={1024}
+            fill
             priority
-            className="w-full h-auto max-w-[560px] lg:max-w-[680px]"
+            sizes="(max-width: 1320px) 100vw, 1320px"
+            className="object-contain"
           />
         </div>
-      </div>
-    </section>
+      }
+    />
   );
 }

@@ -5,10 +5,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Button } from "@/components/ui/Button";
 
 const links = [
-  { href: "/#products", label: "Products" },
+  { href: "/antrix-measure", label: "Antrix Measure" },
+  { href: "/antrix-awm", label: "Antrix AWM" },
   { href: "/solutions", label: "Solutions" },
   { href: "/about", label: "About" },
   { href: "/#contact", label: "Contact" },
@@ -29,43 +29,36 @@ export function Nav() {
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 border-b bg-bg-primary/80 backdrop-blur transition-shadow duration-300 ${
-        scrolled
-          ? "border-border shadow-[0_4px_24px_rgba(0,0,0,0.35)]"
-          : "border-transparent"
+      className={`fixed top-0 inset-x-0 z-50 transition-colors duration-500 ${
+        scrolled || open
+          ? "bg-black/70 backdrop-blur-xl backdrop-saturate-150 border-b border-white/10"
+          : "bg-transparent border-b border-transparent"
       }`}
     >
-      <div className="max-w-content mx-auto flex items-center justify-between px-md md:px-xl h-[72px]">
-        <Link href="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <Image
-            src="/images/logo.png"
-            alt="Antrix"
-            width={44}
-            height={44}
-            className="w-10 h-10 md:w-11 md:h-11 transition-transform duration-300 hover:scale-110 hover:rotate-6"
-          />
-          <span className="text-[17px] md:text-[18px] font-semibold tracking-tighter">
-            ANTRIX
-          </span>
+      <div className="max-w-content mx-auto flex items-center justify-between px-md md:px-xl h-[56px]">
+        <Link href="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
+          <Image src="/images/logo.png" alt="Antrix" width={32} height={32} className="w-8 h-8" />
+          <span className="text-[15px] font-semibold tracking-[0.2em]">ANTRIX</span>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-xl">
+        <nav className="hidden md:flex items-center gap-lg">
           {links.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="nav-link text-[14px] text-text-secondary hover:text-white transition-colors"
+              className="text-[13px] text-white/70 hover:text-white transition-colors"
             >
               {link.label}
             </Link>
           ))}
         </nav>
 
-        <div className="hidden md:block">
-          <Button href="/#contact" arrow>
-            Request a Demo
-          </Button>
-        </div>
+        <Link
+          href="/#contact"
+          className="hidden md:inline-block rounded-full bg-white px-[16px] py-[6px] text-[13px] font-medium text-black transition-transform duration-300 hover:scale-[1.05]"
+        >
+          Request a demo
+        </Link>
 
         <button
           type="button"
@@ -73,7 +66,7 @@ export function Nav() {
           onClick={() => setOpen((v) => !v)}
           className="md:hidden text-white p-2 -mr-2"
         >
-          {open ? <X size={24} /> : <Menu size={24} />}
+          {open ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
 
@@ -81,30 +74,29 @@ export function Nav() {
         {open && (
           <motion.div
             initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
+            animate={{ height: "100vh", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-            className="md:hidden overflow-hidden border-t border-border bg-bg-primary"
+            transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+            className="md:hidden overflow-hidden bg-black"
           >
-            <div className="px-md py-lg">
-              <nav className="flex flex-col gap-md">
-                {links.map((link) => (
+            <nav className="flex flex-col gap-md px-md pt-lg">
+              {links.map((link, i) => (
+                <motion.div
+                  key={link.href}
+                  initial={{ opacity: 0, y: -8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.08 + i * 0.05 }}
+                >
                   <Link
-                    key={link.href}
                     href={link.href}
                     onClick={() => setOpen(false)}
-                    className="text-[16px] text-text-secondary hover:text-white transition-colors"
+                    className="text-[28px] font-semibold tracking-tighter text-white"
                   >
                     {link.label}
                   </Link>
-                ))}
-              </nav>
-              <div className="mt-lg" onClick={() => setOpen(false)}>
-                <Button href="/#contact" arrow>
-                  Request a Demo
-                </Button>
-              </div>
-            </div>
+                </motion.div>
+              ))}
+            </nav>
           </motion.div>
         )}
       </AnimatePresence>

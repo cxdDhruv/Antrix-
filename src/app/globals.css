@@ -21,6 +21,28 @@ body {
   outline-offset: 3px;
 }
 
+body {
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "ss01", "cv11";
+}
+
+.precision-grid::before { display: none !important; }
+.tech-sheen::after { display: none !important; }
+
+.ticker-track-reverse {
+  animation: ticker-scroll 40s linear infinite reverse;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ticker-track,
+  .ticker-track-reverse {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -137,14 +159,14 @@ body {
   }
 
   .card-hover:hover {
-    transform: translateY(-4px);
-    border-color: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 16px 40px -18px rgba(255, 255, 255, 0.15);
+    transform: none;
+    border-color: rgba(255, 255, 255, 0.7);
+    box-shadow: none;
   }
 
   .theme-light .card-hover:hover {
-    border-color: rgba(10, 10, 10, 0.3);
-    box-shadow: 0 16px 40px -18px rgba(0, 0, 0, 0.18);
+    border-color: #0a0a0a;
+    box-shadow: none;
   }
 
   .step-hover {

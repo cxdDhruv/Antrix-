@@ -1,135 +1,95 @@
-import { Eyebrow } from "@/components/ui/Eyebrow";
+import Image from "next/image";
+import Link from "next/link";
+import { ChevronRight } from "lucide-react";
 import { Reveal } from "@/components/ui/Reveal";
-import { Button } from "@/components/ui/Button";
-import { AmbientBackground } from "@/components/ui/AmbientBackground";
-import { Check } from "lucide-react";
 
-const specs = [
-  "±0.01mm Measurement Accuracy",
-  "9 Cut Types (Round + 8 Fancy Cuts)",
-  "Single & Multi-Stone Measurement",
-  "LED-Guided Bin Placement",
-  "Automatic Shape Classification",
-  "High-Precision Optical Calibration",
-  "Desktop Application Interface",
-];
-
-const awmSpecs = [
-  "0.26px Best-Case Uncertainty",
-  "Benchmarked Against 8 Detectors",
-  "Accurate to 8px Edge Separation",
-  "Up to ~20% Lower Uncertainty",
-  "Sub-Micron-Class Repeatability",
-  "No Calibration Required",
+const tiles = [
+  {
+    tag: "Flagship product",
+    name: "Antrix Measure",
+    line: "Automated diamond measurement. ±0.01mm. Zero human error.",
+    href: "/antrix-measure",
+    img: "/images/measure-product.png",
+    light: true,
+  },
+  {
+    tag: "Measurement engine",
+    name: "Antrix AWM",
+    line: "Sub-pixel edge localization. Accurate where others fail.",
+    href: "/antrix-awm",
+    img: "/images/awm/logo.png",
+    light: false,
+  },
 ];
 
 export function Products() {
   return (
-    <section
-      id="products"
-      className="relative overflow-hidden py-2xl md:py-3xl bg-bg-secondary"
-    >
-      <AmbientBackground variant="dark" />
-      <div className="relative z-10 max-w-content mx-auto px-md md:px-xl">
-        <Reveal>
-          <Eyebrow>OUR PRODUCTS</Eyebrow>
-          <h2 className="text-[28px] md:text-[48px] font-bold tracking-display leading-[1.1]">
-            Precision, Packaged.
+    <section id="products" className="bg-black py-2xl md:py-3xl">
+      <div className="max-w-content mx-auto px-md md:px-xl">
+        <Reveal className="text-center">
+          <h2 className="text-[40px] md:text-[80px] font-semibold tracking-tightest leading-[1]">
+            Precision, packaged.
           </h2>
         </Reveal>
 
-        <Reveal delay={0.1} className="mt-xl">
-          <div className="tech-sheen card-hover border border-border rounded-lg bg-bg-elevated p-lg md:p-xl">
-            <span className="inline-block font-mono text-[11px] uppercase tracking-eyebrow text-text-muted border border-border rounded px-3 py-1">
-              FLAGSHIP PRODUCT
-            </span>
-
-            <h3 className="mt-md text-[28px] md:text-[36px] font-bold tracking-display">
-              Antrix Measure
-            </h3>
-
-            <p className="mt-sm text-[16px] md:text-[18px] text-white/90">
-              Automated dimensional measurement for cut diamonds.
-              ±0.01mm accuracy. Zero human error.
-            </p>
-
-            <p className="mt-md max-w-[720px] text-[16px] leading-[1.7] text-text-secondary">
-              Antrix Measure is an automated machine vision system that
-              measures the precise dimensions of cut diamonds across 9 cut
-              types. Faster, more accurately, and more consistently than any
-              manual process. Built for diamond processors, sorters, and
-              quality labs that need measurement data they can trust
-              completely.
-            </p>
-
-            <ul className="mt-lg grid grid-cols-1 md:grid-cols-2 gap-sm max-w-[720px]">
-              {specs.map((spec) => (
-                <li
-                  key={spec}
-                  className="flex items-start gap-2 text-[15px] text-text-secondary"
+        <div className="mt-xl grid grid-cols-1 lg:grid-cols-2 gap-md">
+          {tiles.map((t, i) => (
+            <Reveal key={t.name} delay={i * 0.1}>
+              <div
+                className={`group relative overflow-hidden rounded-[32px] min-h-[600px] md:min-h-[720px] flex flex-col items-center pt-xl px-md text-center ${
+                  t.light
+                    ? "bg-[#eceeec] text-black"
+                    : "bg-[#0d0d0d] text-white border border-white/10"
+                }`}
+              >
+                <p
+                  className={`text-[13px] font-semibold uppercase tracking-[0.14em] ${
+                    t.light ? "text-black/50" : "text-white/50"
+                  }`}
                 >
-                  <Check size={16} className="mt-1 shrink-0 text-white" />
-                  {spec}
-                </li>
-              ))}
-            </ul>
-
-            <div className="mt-xl flex flex-wrap gap-md">
-              <Button href="/antrix-measure" arrow>
-                Learn More About Antrix Measure
-              </Button>
-              <Button href="/#contact" variant="ghost">
-                Request a Demo
-              </Button>
-            </div>
-          </div>
-        </Reveal>
-
-        <Reveal delay={0.15} className="mt-lg">
-          <div className="tech-sheen card-hover border border-border rounded-lg bg-bg-elevated p-lg md:p-xl">
-            <span className="inline-block font-mono text-[11px] uppercase tracking-eyebrow text-text-muted border border-border rounded px-3 py-1">
-              MEASUREMENT ENGINE
-            </span>
-
-            <h3 className="mt-md text-[28px] md:text-[36px] font-bold tracking-display">
-              Antrix AWM
-            </h3>
-
-            <p className="mt-sm text-[16px] md:text-[18px] text-white/90">
-              Proprietary sub-pixel edge localization engine. Benchmarked
-              against 8 established methods. Accurate where others fail.
-            </p>
-
-            <p className="mt-md max-w-[720px] text-[16px] leading-[1.7] text-text-secondary">
-              Antrix AWM (Adaptive Window Moments) is the measurement core
-              behind Antrix&apos;s vision-based dimensional inspection. It
-              finds edge, hole, and gap boundaries to a small fraction of a
-              pixel, and keeps that accuracy on noisy images and
-              closely-spaced edges where most edge detectors quietly fail.
-            </p>
-
-            <ul className="mt-lg grid grid-cols-1 md:grid-cols-2 gap-sm max-w-[720px]">
-              {awmSpecs.map((spec) => (
-                <li
-                  key={spec}
-                  className="flex items-start gap-2 text-[15px] text-text-secondary"
+                  {t.tag}
+                </p>
+                <h3 className="mt-xs text-[36px] md:text-[52px] font-semibold tracking-tighter">
+                  {t.name}
+                </h3>
+                <p
+                  className={`mt-xs max-w-[420px] text-[17px] md:text-[19px] leading-[1.45] ${
+                    t.light ? "text-black/70" : "text-white/70"
+                  }`}
                 >
-                  <Check size={16} className="mt-1 shrink-0 text-white" />
-                  {spec}
-                </li>
-              ))}
-            </ul>
-
-            <div className="mt-xl flex flex-wrap gap-md">
-              <Button href="/antrix-awm" arrow>
-                Learn More About Antrix AWM
-              </Button>
-              <Button href="/#contact" variant="ghost">
-                Talk to Us
-              </Button>
-            </div>
-          </div>
-        </Reveal>
+                  {t.line}
+                </p>
+                <div className="mt-md flex items-center gap-lg">
+                  <Link
+                    href={t.href}
+                    className={`rounded-full px-[22px] py-[10px] text-[15px] font-medium transition-transform duration-300 hover:scale-[1.04] ${
+                      t.light ? "bg-black text-white" : "bg-white text-black"
+                    }`}
+                  >
+                    Learn more
+                  </Link>
+                  <Link
+                    href="/#contact"
+                    className="inline-flex items-center gap-1 text-[15px] font-medium"
+                  >
+                    Request demo <ChevronRight size={16} />
+                  </Link>
+                </div>
+                <div className="relative mt-lg w-full flex-1 min-h-[300px]">
+                  <Image
+                    src={t.img}
+                    alt={t.name}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 640px"
+                    className={`object-contain object-bottom transition-transform duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.05] ${
+                      t.light ? "" : "p-xl"
+                    }`}
+                  />
+                </div>
+              </div>
+            </Reveal>
+          ))}
+        </div>
       </div>
     </section>
   );

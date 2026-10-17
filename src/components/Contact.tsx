@@ -66,7 +66,7 @@ export function Contact() {
   }
 
   const inputClass =
-    "w-full bg-bg-secondary border border-border rounded-md px-4 py-3 text-[15px] text-white placeholder:text-text-muted focus:outline-none focus:border-white/50 focus:shadow-[0_0_0_3px_rgba(255,255,255,0.08)] transition-all duration-200";
+    "w-full bg-[#111] border border-white/10 rounded-xl px-4 py-[14px] text-[15px] text-white placeholder:text-text-muted focus:outline-none focus:border-white/50 focus:shadow-[0_0_0_3px_rgba(255,255,255,0.08)] transition-all duration-200";
 
   return (
     <section id="contact" className="py-2xl md:py-3xl">
@@ -168,7 +168,7 @@ export function Contact() {
             <button
               type="submit"
               disabled={status === "sending"}
-              className="w-full md:w-auto inline-flex items-center justify-center gap-2 px-[28px] py-[14px] rounded-md text-[14px] md:text-[15px] font-semibold tracking-button bg-white text-black hover:bg-white/85 transition-colors disabled:opacity-60"
+              className="w-full md:w-auto inline-flex items-center justify-center gap-2 px-[28px] py-[14px] rounded-full text-[15px] md:text-[17px] font-medium bg-white text-black hover:scale-[1.03] transition-transform disabled:opacity-60"
             >
               {status === "sending" ? "Sending..." : "Send Message →"}
             </button>

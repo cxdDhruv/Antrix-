@@ -1,54 +1,52 @@
-import { Eyebrow } from "@/components/ui/Eyebrow";
+import Link from "next/link";
+import { Eye, Cpu, Wrench, ChevronRight } from "lucide-react";
 import { Reveal } from "@/components/ui/Reveal";
-import { Button } from "@/components/ui/Button";
-import { AmbientBackground } from "@/components/ui/AmbientBackground";
-import { Eye, Cpu, Wrench } from "lucide-react";
 
 const cards = [
   {
     icon: Eye,
     title: "Machine Vision Systems",
-    body: "We build computer vision pipelines that detect, measure, classify, and inspect in real time, at industrial scale. Our systems see what human eyes and standard cameras miss completely.",
+    body: "Computer vision pipelines that detect, measure, classify and inspect in real time, at industrial scale.",
   },
   {
     icon: Cpu,
     title: "Mechatronics Engineering",
-    body: "Hardware and software, designed together. We engineer complete systems, spanning mechanical design, electronics, embedded firmware, and control logic, that work as one precise unit.",
+    body: "Mechanical design, electronics, embedded firmware and control logic, engineered as one precise unit.",
   },
   {
     icon: Wrench,
     title: "Custom Solutions",
-    body: "Every industry has a problem that standard tools can't solve. We partner with clients to design and build custom machine vision and mechatronics solutions, from first concept to full deployment.",
+    body: "From first concept to full deployment, we build what standard tools can't solve.",
   },
 ];
 
 export function Capabilities() {
   return (
-    <section
-      id="capabilities"
-      className="relative overflow-hidden py-2xl md:py-3xl theme-light"
-    >
-      <AmbientBackground variant="light" />
-      <div className="relative z-10 max-w-content mx-auto px-md md:px-xl">
+    <section id="capabilities" className="bg-[#f5f5f7] text-black py-2xl md:py-3xl">
+      <div className="max-w-content mx-auto px-md md:px-xl">
         <Reveal>
-          <Eyebrow>WHAT WE DO</Eyebrow>
-          <h2 className="text-[28px] md:text-[48px] font-bold tracking-display leading-[1.1]">
+          <p className="text-[15px] md:text-[17px] font-semibold text-black/50">
+            What we do
+          </p>
+          <h2 className="mt-xs text-[40px] md:text-[80px] font-semibold tracking-tightest leading-[1]">
             Vision. Mechanics.
             <br />
-            Intelligence.
+            <span className="text-black/40">Intelligence.</span>
           </h2>
         </Reveal>
 
         <div className="mt-xl grid grid-cols-1 md:grid-cols-3 gap-md">
-          {cards.map((card, i) => (
-            <Reveal key={card.title} delay={i * 0.1}>
-              <div className="tech-sheen card-hover h-full border border-border rounded-lg bg-bg-secondary p-lg hover:bg-bg-elevated transition-colors">
-                <card.icon size={28} className="text-white" />
-                <h3 className="mt-md text-[20px] font-semibold">
-                  {card.title}
+          {cards.map((c, i) => (
+            <Reveal key={c.title} delay={i * 0.1} className="h-full">
+              <div className="h-full rounded-[28px] bg-white p-lg md:p-xl transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_30px_60px_-30px_rgba(0,0,0,0.25)]">
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-black text-white">
+                  <c.icon size={26} />
+                </div>
+                <h3 className="mt-xl text-[24px] md:text-[28px] font-semibold tracking-tighter leading-[1.15]">
+                  {c.title}
                 </h3>
-                <p className="mt-sm text-[15px] leading-[1.7] text-text-secondary">
-                  {card.body}
+                <p className="mt-sm text-[16px] leading-[1.6] text-black/60">
+                  {c.body}
                 </p>
               </div>
             </Reveal>
@@ -56,9 +54,16 @@ export function Capabilities() {
         </div>
 
         <Reveal delay={0.3} className="mt-xl">
-          <Button href="/solutions" variant="ghost" arrow>
-            See All Solutions
-          </Button>
+          <Link
+            href="/solutions"
+            className="group inline-flex items-center gap-1 text-[17px] font-medium"
+          >
+            See all solutions
+            <ChevronRight
+              size={18}
+              className="transition-transform duration-300 group-hover:translate-x-1"
+            />
+          </Link>
         </Reveal>
       </div>
     </section>
